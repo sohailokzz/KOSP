@@ -1,0 +1,63 @@
+name: kust_online
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - assets/splashimage.jpg
+    - assets/logo.gif
+    - assets/menubackground.jpg
+    - assets/audi1.png
+    - assets/comp.png
+    - assets/host.png
+    - assets/lostfound.png
+    - assets/parking.png
+    - assets/mosque.png
+    - assets/promotion.png
+    - assets/appoint.png
+    - assets/bus.png
+    - assets/cafe.png
+    - assets/info.png
+    - assets/mosque1.png
+    - assets/abtkust.jpg
+    - assets/auditorium.jpg
+    - assets/lostfound.jpg
+    - assets/hostel.jpg
+    - assets/masjid.png
+    - assets/busback.jpg
+    - assets/cafemain.jpg
+    - assets/sohail.jpg
+    - assets/person.png
+
+
+
+
+  fonts:
+  - family: Audiowide
+    fonts:
+    - asset: fonts/Audiowide-Regular.ttf
+
+
+
+
