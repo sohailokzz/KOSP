@@ -4,6 +4,7 @@ import 'i_lost.dart';
 import 'i_found.dart';
 
 class LostFound extends StatelessWidget {
+  static String id = 'lost_found';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,8 +12,8 @@ class LostFound extends StatelessWidget {
       title: 'Lost & Found',
       home: LostFoundFront(),
       routes: {
-        '/ilost':(context)=> ILost(),
-        '/ifound': (context)=> IFound(),
+        ILost.id: (context) => ILost(),
+        IFound.id: (context) => IFound(),
       },
     );
   }
@@ -81,7 +82,8 @@ class LostFoundChoose extends StatelessWidget {
                     color: Color(0xBAFFFFFF),
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  padding: const EdgeInsets.only(top: 50.0, left: 16.0, right: 16.0, bottom: 50.0),
+                  padding: const EdgeInsets.only(
+                      top: 50.0, left: 16.0, right: 16.0, bottom: 50.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -91,7 +93,9 @@ class LostFoundChoose extends StatelessWidget {
                             child: kMyButton(
                               label: 'I Lost',
                               size: 20.0,
-                              route: '/ilost',
+                              onPress: () {
+                                Navigator.pushNamed(context, ILost.id);
+                              },
                             ),
                           ),
                         ],
@@ -105,7 +109,9 @@ class LostFoundChoose extends StatelessWidget {
                             child: kMyButton(
                               label: 'I Found',
                               size: 20.0,
-                              route: '/ifound',
+                              onPress: () {
+                                Navigator.pushNamed(context, IFound.id);
+                              },
                             ),
                           ),
                         ],

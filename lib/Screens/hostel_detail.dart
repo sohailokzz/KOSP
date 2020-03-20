@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 
 class HostelDetails extends StatelessWidget {
+  static String id = 'hostel_details';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -186,7 +187,6 @@ class ReusableHostelRow extends StatelessWidget {
                                 status: 'Available',
                                 distanceBetween: 65.0,
                               ),
-
                             ],
                           ),
                         ),

@@ -87,8 +87,12 @@ class BookingInfo extends StatelessWidget {
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Name',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Password',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -97,8 +101,12 @@ class BookingInfo extends StatelessWidget {
                         nameField: 'Department:',
                         icon: Icons.school,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Department',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Department',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -107,8 +115,12 @@ class BookingInfo extends StatelessWidget {
                         icon: Icons.event,
                         nameField: 'Event Name:',
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Event Name',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Event Name',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -117,8 +129,12 @@ class BookingInfo extends StatelessWidget {
                         icon: Icons.timer,
                         nameField: 'Event Date:',
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Event Date',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Event Date',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -128,20 +144,11 @@ class BookingInfo extends StatelessWidget {
                         nameField: 'Description:',
                       ),
                       TextField(
+                        textAlign: TextAlign.center,
                         keyboardType: TextInputType.multiline,
                         maxLines: 10,
-                        cursorColor: Colors.black,
-                        decoration: InputDecoration(
+                        decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Give Description',
-                          hintStyle: ktextStyle.copyWith(
-                              fontSize: 15.0, color: Colors.grey),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(15.0),
-                            ),
-                          ),
                         ),
                       ),
                       SizedBox(
@@ -152,20 +159,12 @@ class BookingInfo extends StatelessWidget {
                         nameField: 'Resources Required:',
                       ),
                       TextField(
+                        textAlign: TextAlign.center,
                         keyboardType: TextInputType.multiline,
                         maxLines: 5,
                         cursorColor: Colors.black,
-                        decoration: InputDecoration(
+                        decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Mention Resources Required',
-                          hintStyle: ktextStyle.copyWith(
-                              fontSize: 15.0, color: Colors.grey),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(15.0),
-                            ),
-                          ),
                         ),
                       ),
                       Padding(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 
 class CafeDetails extends StatelessWidget {
+  static String id = 'cafe_details';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

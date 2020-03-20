@@ -3,19 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 
 class IFound extends StatelessWidget {
+  static String id = 'i_found';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'I Lost',
+      title: 'I Found',
       home: IFoundFront(),
     );
   }
 }
 
 class IFoundFront extends StatefulWidget {
-
-
   @override
   _IFoundFrontState createState() => _IFoundFrontState();
 }
@@ -261,7 +260,7 @@ class CreatePost extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: 'Give Description',
                     hintStyle:
-                    ktextStyle.copyWith(fontSize: 15.0, color: Colors.grey),
+                        ktextStyle.copyWith(fontSize: 15.0, color: Colors.grey),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(

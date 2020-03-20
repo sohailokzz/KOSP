@@ -3,6 +3,7 @@ import 'package:kust_online/constant.dart';
 import 'auditoriums_constants.dart';
 
 class PhysicsAudiDetails extends StatelessWidget {
+  static String id = 'physics_auditorium';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

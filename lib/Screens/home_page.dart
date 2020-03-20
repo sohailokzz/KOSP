@@ -21,17 +21,17 @@ class HomePage extends StatelessWidget {
       title: 'HomePage',
       home: Menu(),
       routes: {
-        '/abtkust': (context) => AboutKUST(),
-        '/auditorium': (context) => Auditorium(),
-        '/lostfound': (context) => LostFound(),
-        '/hosteldetail': (context) => HostelDetails(),
-        '/busdetails': (context) => BusDetails(),
-        '/namazdetail': (context) => NamazDetails(),
-        '/cafedetails': (context) => CafeDetails(),
-        '/parkingdetails': (context) => ParkingDetails(),
-        '/complaintbox': (context) => ComplaintBox(),
-        '/vcappointment': (context) => VCAppointment(),
-        '/accountsetting': (context)=> AboutAccount(),
+        AboutKUST.id: (context) => AboutKUST(),
+        Auditorium.id: (context) => Auditorium(),
+        LostFound.id: (context) => LostFound(),
+        HostelDetails.id: (context) => HostelDetails(),
+        BusDetails.id: (context) => BusDetails(),
+        NamazDetails.id: (context) => NamazDetails(),
+        CafeDetails.id: (context) => CafeDetails(),
+        ParkingDetails.id: (context) => ParkingDetails(),
+        ComplaintBox.id: (context) => ComplaintBox(),
+        VCAppointment.id: (context) => VCAppointment(),
+        AboutAccount.id: (context) => AboutAccount(),
       },
     );
   }
@@ -80,7 +80,7 @@ class MyMenu extends StatelessWidget {
               size: 40.0,
             ),
             onPressed: () {
-              Navigator.pushNamed(context, '/accountsetting');
+              Navigator.pushNamed(context, AboutAccount.id);
             },
           )
         ],
@@ -122,7 +122,9 @@ class MyMenu extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: kReusableButton(
-                              route: '/abtkust',
+                              onPress: () {
+                                Navigator.pushNamed(context, AboutKUST.id);
+                              },
                               cardChild: kIconContent(
                                 label: 'About KUST',
                                 assetImage: 'assets/logo.gif',
@@ -134,7 +136,9 @@ class MyMenu extends StatelessWidget {
                           ),
                           Expanded(
                             child: kReusableButton(
-                              route: '/auditorium',
+                              onPress: () {
+                                Navigator.pushNamed(context, Auditorium.id);
+                              },
                               cardChild: kIconContent(
                                 label: 'Auditorium',
                                 assetImage: 'assets/audi1.png',
@@ -151,7 +155,9 @@ class MyMenu extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: kReusableButton(
-                              route: '/complaintbox',
+                              onPress: () {
+                                Navigator.pushNamed(context, ComplaintBox.id);
+                              },
                               cardChild: kIconContent(
                                 label: 'Complaint Box',
                                 assetImage: 'assets/comp.png',
@@ -164,7 +170,9 @@ class MyMenu extends StatelessWidget {
                           ),
                           Expanded(
                             child: kReusableButton(
-                              route: '/hosteldetail',
+                              onPress: () {
+                                Navigator.pushNamed(context, HostelDetails.id);
+                              },
                               cardChild: kIconContent(
                                 label: 'Hostel Details',
                                 assetImage: 'assets/host.png',
@@ -181,7 +189,9 @@ class MyMenu extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: kReusableButton(
-                              route: '/vcappointment',
+                              onPress: () {
+                                Navigator.pushNamed(context, VCAppointment.id);
+                              },
                               cardChild: kIconContent(
                                 label: 'V.C Appointment',
                                 assetImage: 'assets/appoint.png',
@@ -194,7 +204,9 @@ class MyMenu extends StatelessWidget {
                           ),
                           Expanded(
                             child: kReusableButton(
-                              route: '/lostfound',
+                              onPress: () {
+                                Navigator.pushNamed(context, LostFound.id);
+                              },
                               cardChild: kIconContent(
                                 label: 'Lost & Found',
                                 assetImage: 'assets/lostfound.png',
@@ -211,7 +223,10 @@ class MyMenu extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: kReusableButton(
-                                route: '/parkingdetails',
+                                onPress: () {
+                                  Navigator.pushNamed(
+                                      context, ParkingDetails.id);
+                                },
                                 cardChild: kIconContent(
                                   label: 'Parking Details',
                                   assetImage: 'assets/parking.png',
@@ -223,7 +238,9 @@ class MyMenu extends StatelessWidget {
                           ),
                           Expanded(
                             child: kReusableButton(
-                              route: '/busdetails',
+                              onPress: () {
+                                Navigator.pushNamed(context, BusDetails.id);
+                              },
                               cardChild: kIconContent(
                                 label: 'Bus Details',
                                 assetImage: 'assets/bus.png',
@@ -240,7 +257,9 @@ class MyMenu extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: kReusableButton(
-                              route: '/cafedetails',
+                              onPress: () {
+                                Navigator.pushNamed(context, CafeDetails.id);
+                              },
                               cardChild: kIconContent(
                                 label: 'Cafe Details',
                                 assetImage: 'assets/cafe.png',
@@ -253,7 +272,9 @@ class MyMenu extends StatelessWidget {
                           ),
                           Expanded(
                             child: kReusableButton(
-                                route: '/namazdetail',
+                                onPress: () {
+                                  Navigator.pushNamed(context, NamazDetails.id);
+                                },
                                 cardChild: kIconContent(
                                   label: 'Namaz Details',
                                   assetImage: 'assets/mosque1.png',
@@ -271,6 +292,7 @@ class MyMenu extends StatelessWidget {
                           Expanded(
                             flex: 0,
                             child: kReusableButton(
+                              onPress: () {},
                               cardChild: kIconContent(
                                 label: 'About',
                                 assetImage: 'assets/info.png',

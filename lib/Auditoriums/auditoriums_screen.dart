@@ -7,7 +7,9 @@ import 'english_auditorium.dart';
 import 'physics_auditorium.dart';
 import 'chemistry_auditorium.dart';
 import 'ibs_auditorium.dart';
+
 class Auditorium extends StatelessWidget {
+  static String id = 'auditorium';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,13 +17,13 @@ class Auditorium extends StatelessWidget {
       title: 'Auditoriums',
       home: Auditoriums(),
       routes: {
-        '/mainaudi': (context) => MainAudiDetails(),
-        '/iocaudi': (context) => IOCAudiDetails(),
-        '/mathsaudi': (context) => MathsAudiDetails(),
-        '/englishaudi': (context)=> EnglishAudiDetails(),
-        '/physicsaudi': (context) => PhysicsAudiDetails(),
-        '/chemistryaudi': (context)=> ChemistryAudiDetails(),
-        '/ibsaudi':(context)=> IBSAudiDetails(),
+        MainAudiDetails.id: (context) => MainAudiDetails(),
+        IOCAudiDetails.id: (context) => IOCAudiDetails(),
+        MathsAudiDetails.id: (context) => MathsAudiDetails(),
+        EnglishAudiDetails.id: (context) => EnglishAudiDetails(),
+        PhysicsAudiDetails.id: (context) => PhysicsAudiDetails(),
+        ChemistryAudiDetails.id: (context) => ChemistryAudiDetails(),
+        IBSAudiDetails.id: (context) => IBSAudiDetails(),
       },
     );
   }
@@ -99,7 +101,10 @@ class AllAuditorium extends StatelessWidget {
                             child: kMyButton(
                               label: 'Main Auditorium',
                               size: 20.0,
-                              route: '/mainaudi',
+                              onPress: () {
+                                Navigator.pushNamed(
+                                    context, MainAudiDetails.id);
+                              },
                             ),
                           ),
                         ],
@@ -109,27 +114,39 @@ class AllAuditorium extends StatelessWidget {
                       ),
                       ReusableRow(
                         label1: 'IOC',
-                        route1: '/iocaudi',
+                        route1: () {
+                          Navigator.pushNamed(context, IOCAudiDetails.id);
+                        },
                         label2: 'Maths',
-                        route2: '/mathsaudi',
+                        route2: () {
+                          Navigator.pushNamed(context, MathsAudiDetails.id);
+                        },
                       ),
                       SizedBox(
                         height: 20.0,
                       ),
                       ReusableRow(
                         label1: 'English',
-                        route1: '/englishaudi',
+                        route1: () {
+                          Navigator.pushNamed(context, EnglishAudiDetails.id);
+                        },
                         label2: 'Physics',
-                        route2: '/physicsaudi',
+                        route2: () {
+                          Navigator.pushNamed(context, MathsAudiDetails.id);
+                        },
                       ),
                       SizedBox(
                         height: 20.0,
                       ),
                       ReusableRow(
                         label1: 'Chemistry',
-                        route1: '/chemistryaudi',
+                        route1: () {
+                          Navigator.pushNamed(context, ChemistryAudiDetails.id);
+                        },
                         label2: 'IBS',
-                        route2: '/ibsaudi',
+                        route2: () {
+                          Navigator.pushNamed(context, MathsAudiDetails.id);
+                        },
                       )
                     ],
                   ),
@@ -147,8 +164,8 @@ class ReusableRow extends StatelessWidget {
   ReusableRow({this.label1, this.label2, this.route1, this.route2});
   final String label1;
   final String label2;
-  final String route1;
-  final String route2;
+  final Function route1;
+  final Function route2;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -157,7 +174,7 @@ class ReusableRow extends StatelessWidget {
           child: kMyButton(
             label: label1,
             size: 17.0,
-            route: route1,
+            onPress: route1,
           ),
         ),
         SizedBox(
@@ -167,7 +184,7 @@ class ReusableRow extends StatelessWidget {
           child: kMyButton(
             label: label2,
             size: 17.0,
-            route: route2,
+            onPress: route1,
           ),
         ),
       ],

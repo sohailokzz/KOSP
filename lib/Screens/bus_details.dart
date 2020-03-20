@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 
 class BusDetails extends StatelessWidget {
+  static String id = 'bus_details';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -132,7 +133,12 @@ class BusChoose extends StatelessWidget {
 }
 
 class ReusableBusRow extends StatelessWidget {
-  ReusableBusRow({this.busName, this.morningTiming, this.morningLocation, this.eveningTiming, this.eveningLocation});
+  ReusableBusRow(
+      {this.busName,
+      this.morningTiming,
+      this.morningLocation,
+      this.eveningTiming,
+      this.eveningLocation});
 
   final String busName;
   final String morningTiming;
@@ -246,14 +252,16 @@ class ReusableBusRow extends StatelessWidget {
                                     children: <Widget>[
                                       Text(
                                         'Timing:',
-                                        style: ktextStyle.copyWith(fontSize: 15.0),
+                                        style:
+                                            ktextStyle.copyWith(fontSize: 15.0),
                                       ),
                                       SizedBox(
                                         width: 140.0,
                                       ),
                                       Text(
                                         eveningTiming,
-                                        style: ktextStyle.copyWith(fontSize: 15.0),
+                                        style:
+                                            ktextStyle.copyWith(fontSize: 15.0),
                                       ),
                                     ],
                                   ),
@@ -264,7 +272,8 @@ class ReusableBusRow extends StatelessWidget {
                                     children: <Widget>[
                                       Text(
                                         'Start Location:',
-                                        style: ktextStyle.copyWith(fontSize: 15.0),
+                                        style:
+                                            ktextStyle.copyWith(fontSize: 15.0),
                                       ),
                                       SizedBox(
                                         width: 80.0,

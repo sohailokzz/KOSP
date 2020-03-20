@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 
 class AboutKUST extends StatelessWidget {
+  static String id = 'about_kust';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

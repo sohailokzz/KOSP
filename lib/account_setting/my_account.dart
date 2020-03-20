@@ -4,6 +4,7 @@ import 'package:kust_online/constant.dart';
 import 'package:kust_online/Screens/home_page.dart';
 
 class MyAccount extends StatelessWidget {
+  static String id = 'my_account';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -82,12 +83,11 @@ class Profile extends StatelessWidget {
                     color: Color(0xBAFFFFFF),
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  padding: const EdgeInsets.only(top: 5.0,
-                      left: 16.0, right: 16.0, bottom: 50.0),
+                  padding: const EdgeInsets.only(
+                      top: 5.0, left: 16.0, right: 16.0, bottom: 50.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-
                       Center(
                         child: CircleAvatar(
                           backgroundImage: AssetImage('assets/person.png'),
@@ -111,7 +111,6 @@ class Profile extends StatelessWidget {
                         style: ktextStyle.copyWith(
                           fontSize: 12,
                           color: Color(0xFF3B2E7E),
-
                         ),
                       ),
                       TextField(

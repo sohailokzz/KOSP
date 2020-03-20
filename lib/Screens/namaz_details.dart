@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 
 class NamazDetails extends StatelessWidget {
+  static String id = 'namaz_details';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -94,7 +95,6 @@ class NamazChoose extends StatelessWidget {
                           nameNamaz: 'Zohar',
                           timing: '01:00 pm',
                           location: 'Main Mosque KUST',
-
                         ),
                         SizedBox(
                           height: 20.0,
@@ -220,7 +220,7 @@ class ReusableNamazRow extends StatelessWidget {
                                     Text(
                                       'Location:',
                                       style:
-                                      ktextStyle.copyWith(fontSize: 15.0),
+                                          ktextStyle.copyWith(fontSize: 15.0),
                                     ),
                                     SizedBox(
                                       width: 80.0,
@@ -228,8 +228,8 @@ class ReusableNamazRow extends StatelessWidget {
                                     Text(
                                       location,
                                       textAlign: TextAlign.center,
-                                      style:
-                                      ktextStyle.copyWith(fontSize: 15.0,
+                                      style: ktextStyle.copyWith(
+                                        fontSize: 15.0,
                                       ),
                                     ),
                                   ],

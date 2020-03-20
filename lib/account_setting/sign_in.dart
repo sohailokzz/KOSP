@@ -4,6 +4,7 @@ import 'package:kust_online/constant.dart';
 import 'package:kust_online/Screens/home_page.dart';
 
 class SingIn extends StatelessWidget {
+  static String id = 'sign_in';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -62,7 +63,6 @@ class SingInDetails extends StatelessWidget {
                       Image.asset(
                         'assets/logo.gif',
                         height: 150.0,
-                        
                       ),
                       Text(
                         'Sign In',
@@ -99,11 +99,16 @@ class SingInDetails extends StatelessWidget {
                         height: 20.0,
                       ),
                       kReusableName(
+                        nameField: 'Name:',
                         icon: Icons.person,
-                        nameField: 'Username:',
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Username',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        keyboardType: TextInputType.emailAddress,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Email',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -112,8 +117,13 @@ class SingInDetails extends StatelessWidget {
                         nameField: 'Password:',
                         icon: Icons.lock,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Password',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        obscureText: true,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Password',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,

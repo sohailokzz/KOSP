@@ -4,6 +4,7 @@ import 'package:kust_online/constant.dart';
 import 'home_page.dart';
 
 class ParkingDetails extends StatelessWidget {
+  static String id = 'parking_details';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,7 +12,7 @@ class ParkingDetails extends StatelessWidget {
       title: 'Parking Details',
       home: ParkingRegistrationForm(),
       routes: {
-        '/homepage':(context)=>HomePage(),
+        '/homepage': (context) => HomePage(),
       },
     );
   }
@@ -100,8 +101,12 @@ class VehicelForm extends StatelessWidget {
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Name',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Name',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -110,8 +115,12 @@ class VehicelForm extends StatelessWidget {
                         nameField: 'Father Name:',
                         icon: Icons.person,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Father Name',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Father Name',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -120,8 +129,12 @@ class VehicelForm extends StatelessWidget {
                         icon: Icons.credit_card,
                         nameField: 'CNIC:',
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your CNIC Number',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your CNIC Number',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -130,8 +143,12 @@ class VehicelForm extends StatelessWidget {
                         nameField: 'Residence:',
                         icon: Icons.home,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Residence',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Residence',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -144,8 +161,12 @@ class VehicelForm extends StatelessWidget {
                         nameField: 'Attachment:',
                         icon: Icons.attach_file,
                       ),
-                      kReusableTextField(
-                        hintText: 'Add Your Files',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Add Your Files',
+                        ),
                       ),
                       SizedBox(
                         height: 30.0,
@@ -272,7 +293,8 @@ class ConfirmationMessage extends StatelessWidget {
                     style: ktextStyle.copyWith(fontSize: 15.0),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 16.0, left: 18.0, right: 18.0),
+                    padding: const EdgeInsets.only(
+                        top: 16.0, left: 18.0, right: 18.0),
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/homepage');
@@ -303,9 +325,6 @@ class ConfirmationMessage extends StatelessWidget {
   }
 }
 
-
-
-
 enum Category { faculty, admin, student }
 
 class kRadioButton extends StatefulWidget {
@@ -330,7 +349,7 @@ class _kRadioButtonState extends State<kRadioButton> {
           activeColor: Color(0xFF3B2E7E),
           onChanged: (Category value) {
             setState(
-                  () {
+              () {
                 _character = value;
               },
             );
@@ -343,7 +362,7 @@ class _kRadioButtonState extends State<kRadioButton> {
           activeColor: Color(0xFF3B2E7E),
           onChanged: (Category value) {
             setState(
-                  () {
+              () {
                 _character = value;
               },
             );
@@ -359,7 +378,7 @@ class _kRadioButtonState extends State<kRadioButton> {
           activeColor: Color(0xFF3B2E7E),
           onChanged: (Category value) {
             setState(
-                  () {
+              () {
                 _character = value;
               },
             );

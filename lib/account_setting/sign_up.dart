@@ -4,6 +4,7 @@ import 'package:kust_online/constant.dart';
 import 'package:kust_online/Screens/home_page.dart';
 
 class AccountDetails extends StatelessWidget {
+  static String id = 'account_details';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -96,45 +97,31 @@ class RegistraionForm extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
                       kReusableName(
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Name',
+                      TextField(
+                        keyboardType: TextInputType.emailAddress,
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Email',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
                       ),
                       kReusableName(
-                        nameField: 'Email:',
-                        icon: Icons.mail,
-                      ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Email',
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      kReusableName(
+                        nameField: 'UserName:',
                         icon: Icons.person,
-                        nameField: 'Username:',
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Username',
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      kReusableName(
-                        nameField: 'Department:',
-                        icon: Icons.home,
-                      ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Department',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Username',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -143,18 +130,13 @@ class RegistraionForm extends StatelessWidget {
                         nameField: 'Password:',
                         icon: Icons.lock,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Password',
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      kReusableName(
-                        nameField: 'Confirm Password:',
-                        icon: Icons.lock,
-                      ),
-                      kReusableTextField(
-                        hintText: 'Confirm Your Password',
+                      TextField(
+                        obscureText: true,
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Your Password',
+                        ),
                       ),
                       SizedBox(
                         height: 15.0,

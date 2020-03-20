@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 
 class ILost extends StatelessWidget {
+  static String id = 'i_lost';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

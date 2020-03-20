@@ -3,6 +3,7 @@ import 'package:kust_online/constant.dart';
 import 'auditoriums_constants.dart';
 
 class IBSAudiDetails extends StatelessWidget {
+  static String id = 'ibs_auditorium';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

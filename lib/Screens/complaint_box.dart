@@ -4,6 +4,7 @@ import 'package:kust_online/constant.dart';
 import 'home_page.dart';
 
 class ComplaintBox extends StatelessWidget {
+  static String id = 'complaint_box';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -85,8 +86,12 @@ class ComplaintInfo extends StatelessWidget {
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
-                      kReusableTextField(
-                        hintText: 'Enter Your Name',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Event Name',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -95,9 +100,12 @@ class ComplaintInfo extends StatelessWidget {
                         nameField: 'Department:',
                         icon: Icons.school,
                       ),
-
-                      kReusableTextField(
-                        hintText: 'Enter Your Department',
+                      TextField(
+                        textAlign: TextAlign.center,
+                        onChanged: (value) {},
+                        decoration: kTextFieldDecoration.copyWith(
+                          hintText: 'Enter Event Department',
+                        ),
                       ),
                       SizedBox(
                         height: 20.0,
@@ -106,24 +114,15 @@ class ComplaintInfo extends StatelessWidget {
                         nameField: 'Category:',
                       ),
                       kRadioButton(),
-
                       kReusableName(
                         nameField: 'Description:',
                       ),
                       TextField(
+                        textAlign: TextAlign.center,
                         keyboardType: TextInputType.multiline,
                         maxLines: 10,
-                        cursorColor: Colors.black,
-                        decoration: InputDecoration(
+                        decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Give Description',
-                          hintStyle: ktextStyle.copyWith(fontSize: 15.0, color: Colors.grey),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(15.0),
-                            ),
-                          ),
                         ),
                       ),
                       Padding(
@@ -148,7 +147,6 @@ class ComplaintInfo extends StatelessWidget {
                           color: Color(0xFF3B2E7E),
                         ),
                       ),
-
                     ],
                   ),
                 )
@@ -160,8 +158,6 @@ class ComplaintInfo extends StatelessWidget {
     );
   }
 }
-
-
 
 class MyDialogBox extends StatelessWidget {
   @override
@@ -188,7 +184,7 @@ class MyDialogBox extends StatelessWidget {
                 width: 320.0,
                 child: Padding(
                   padding:
-                  const EdgeInsets.only(top: 10.0, left: 50.0, right: 50.0),
+                      const EdgeInsets.only(top: 10.0, left: 50.0, right: 50.0),
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0)),

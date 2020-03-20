@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 const TextStyle ktextStyle = TextStyle(
   color: Colors.white,
   fontFamily: 'Audiowide',
@@ -9,10 +8,10 @@ const TextStyle ktextStyle = TextStyle(
 );
 
 class kReusableButton extends StatelessWidget {
-  kReusableButton({this.cardChild, this.route});
+  kReusableButton({this.cardChild, this.onPress});
 
   final Widget cardChild;
-  final dynamic route;
+  final Function onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +22,7 @@ class kReusableButton extends StatelessWidget {
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
         color: Color(0xFF3B2E7E),
-        onPressed: () {
-          Navigator.pushNamed(context, route);
-        },
+        onPressed: onPress,
         child: cardChild,
       ),
     );
@@ -78,12 +75,10 @@ class kBackground extends StatelessWidget {
 }
 
 class kMyButton extends StatelessWidget {
-  kMyButton({this.label, this.size, this.route});
+  kMyButton({this.label, this.size, this.onPress});
   final String label;
   final double size;
-  final String route;
-
-
+  final Function onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -93,9 +88,7 @@ class kMyButton extends StatelessWidget {
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
         color: Color(0xFF3B2E7E),
-        onPressed: () {
-          Navigator.pushNamed(context, route);
-        },
+        onPressed: onPress,
         child: Center(
           child: Text(
             label,
@@ -106,33 +99,6 @@ class kMyButton extends StatelessWidget {
     );
   }
 }
-
-
-
-class kReusableTextField extends StatelessWidget {
-  kReusableTextField({this.hintText});
-
-  final String hintText;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      cursorColor: Colors.black,
-      decoration: InputDecoration(
-        hintText: hintText,
-        hintStyle: ktextStyle.copyWith(fontSize: 15.0, color: Colors.grey),
-        filled: true,
-        fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(30.0),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 
 class kReusableName extends StatelessWidget {
   kReusableName({this.nameField, this.icon});
@@ -160,3 +126,25 @@ class kReusableName extends StatelessWidget {
   }
 }
 
+const kTextFieldDecoration = InputDecoration(
+  filled: true,
+  fillColor: Colors.white,
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(
+      Radius.circular(32.0),
+    ),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: Color(0xFF3B2E7E), width: 1.0),
+    borderRadius: BorderRadius.all(
+      Radius.circular(32.0),
+    ),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: Color(0xFF3B2E7E), width: 2.0),
+    borderRadius: BorderRadius.all(
+      Radius.circular(32.0),
+    ),
+  ),
+);

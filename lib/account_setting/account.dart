@@ -5,6 +5,7 @@ import 'sign_in.dart';
 import 'my_account.dart';
 
 class AboutAccount extends StatelessWidget {
+  static String id = 'about_account';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,9 +13,9 @@ class AboutAccount extends StatelessWidget {
       title: 'About Account',
       home: AccountFront(),
       routes: {
-        '/signup':(context)=> AccountDetails(),
-        '/signin':(context)=> SingIn(),
-        '/myaccount': (context)=> MyAccount(),
+        AccountDetails.id: (context) => AccountDetails(),
+        SingIn.id: (context) => SingIn(),
+        MyAccount.id: (context) => MyAccount(),
       },
     );
   }
@@ -92,7 +93,9 @@ class AccountInfo extends StatelessWidget {
                             child: kMyButton(
                               label: 'My Account',
                               size: 20.0,
-                              route: '/myaccount',
+                              onPress: () {
+                                Navigator.pushNamed(context, MyAccount.id);
+                              },
                             ),
                           ),
                         ],
@@ -106,7 +109,9 @@ class AccountInfo extends StatelessWidget {
                             child: kMyButton(
                               label: 'Sign In',
                               size: 20.0,
-                              route: '/signin',
+                              onPress: () {
+                                Navigator.pushNamed(context, SingIn.id);
+                              },
                             ),
                           ),
                         ],
@@ -120,7 +125,9 @@ class AccountInfo extends StatelessWidget {
                             child: kMyButton(
                               label: 'Sign Up',
                               size: 20.0,
-                              route: '/signup',
+                              onPress: () {
+                                Navigator.pushNamed(context, AccountDetails.id);
+                              },
                             ),
                           ),
                         ],
