@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kust_online/constant.dart';
+import 'package:KustSmartApp/constant.dart';
 import 'auditoriums_constants.dart';
 
 class IBSAudiDetails extends StatelessWidget {

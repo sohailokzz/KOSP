@@ -1,4 +1,4 @@
-name: kust_online
+name: KustSmartApp
 description: A new Flutter application.
 
 version: 1.0.0+1
@@ -16,6 +16,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_launcher_icons: ^0.7.4
+
+flutter_icons:
+  image_path: "assets/logo.gif"
+  ios: true
+  android: true
 
 
 

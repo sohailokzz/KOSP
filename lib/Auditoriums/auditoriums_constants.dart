@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kust_online/constant.dart';
+import 'package:KustSmartApp/constant.dart';
 import 'auditorium_booking.dart';
 import 'auditorium_details.dart';
 import 'auditorium_requests.dart';
