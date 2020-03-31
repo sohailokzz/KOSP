@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/Auditoriums/event_card_admin.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/Auditoriums/event_card_admin.dart';
+import 'package:kust_online/constant.dart';
 
-import 'event_card.dart';
 
 class AudiRequests extends StatelessWidget {
   @override

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'auditorium_booking.dart';
 import 'auditorium_details.dart';
 import 'auditorium_requests.dart';
 
-class kAuditoriumCheck extends StatelessWidget {
-  kAuditoriumCheck({this.mainLabel});
+class KAuditoriumCheck extends StatelessWidget {
+  KAuditoriumCheck({this.mainLabel});
   final String mainLabel;
 
   @override
@@ -47,7 +47,7 @@ class kAuditoriumCheck extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   padding: const EdgeInsets.all(16.0),
-                  child: kAuditoriumButtons(),
+                  child: KAuditoriumButtons(),
                 )
               ],
             ),
@@ -58,7 +58,7 @@ class kAuditoriumCheck extends StatelessWidget {
   }
 }
 
-class kAuditoriumButtons extends StatelessWidget {
+class KAuditoriumButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(

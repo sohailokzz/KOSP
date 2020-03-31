@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'auditoriums_constants.dart';
 
 class EnglishAudiDetails extends StatelessWidget {
   static String id = 'english_auditorium';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'English Auditorium',
       home: EnglishAudiScreen(),
     );
+
   }
 }
 
@@ -27,10 +28,10 @@ class _EnglishAudiScreenState extends State<EnglishAudiScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/auditorium.jpg',
             ),
-            kAuditoriumCheck(
+            KAuditoriumCheck(
               mainLabel: 'English Auditorium',
             ),
           ],

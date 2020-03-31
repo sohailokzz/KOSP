@@ -1,4 +1,4 @@
-import 'package:KustSmartApp/Home_page_and_menue_page/home_page.dart';
+import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -60,7 +60,7 @@ class SingInDetails extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
@@ -75,7 +75,7 @@ class SingInDetails extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Password:',
                         icon: Icons.lock,
                       ),

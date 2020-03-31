@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'auditoriums_constants.dart';
 
 class IOCAudiDetails extends StatelessWidget {
   static String id = 'ioc_auditorium';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'IOC Auditorium',
       home: IOCAudiScreen(),
     );
+
   }
 }
 
@@ -27,10 +28,10 @@ class _IOCAudiScreenState extends State<IOCAudiScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/auditorium.jpg',
             ),
-            kAuditoriumCheck(
+            KAuditoriumCheck(
               mainLabel: 'IOC Auditorium',
             ),
           ],

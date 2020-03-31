@@ -1,8 +1,8 @@
-import 'package:KustSmartApp/account_setting/signin-details.dart';
+import 'package:kust_online/account_setting/signin-details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
-import 'package:KustSmartApp/Home_page_and_menue_page/home_page.dart';
+import 'package:kust_online/constant.dart';
+import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
 
 class SingIn extends StatelessWidget {
   static String id = 'sign_in';
@@ -32,7 +32,7 @@ class _SignInFormState extends State<SignInForm> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/lostfound.jpg',
             ),
             SingInDetails(),

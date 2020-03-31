@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'auditoriums_constants.dart';
 
 class ChemistryAudiDetails extends StatelessWidget {
   static String id = 'chemistry_auditorium';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
+
       debugShowCheckedModeBanner: false,
       title: 'Chemistry Auditorium',
       home: ChemistryAudiScreen(),
@@ -27,10 +28,10 @@ class _ChemistryAudiScreenState extends State<ChemistryAudiScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/auditorium.jpg',
             ),
-            kAuditoriumCheck(
+            KAuditoriumCheck(
               mainLabel: 'Chemistry Auditorium',
             ),
           ],

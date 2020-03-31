@@ -46,7 +46,7 @@ class BookingForm extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
@@ -60,7 +60,7 @@ class BookingForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Department:',
                         icon: Icons.school,
                       ),
@@ -74,7 +74,7 @@ class BookingForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         icon: Icons.event,
                         nameField: 'Event Name:',
                       ),
@@ -88,7 +88,7 @@ class BookingForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         icon: Icons.timer,
                         nameField: 'Event Date:',
                       ),
@@ -102,7 +102,7 @@ class BookingForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         icon: Icons.description,
                         nameField: 'Description:',
                       ),
@@ -117,7 +117,7 @@ class BookingForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         icon: Icons.report,
                         nameField: 'Resources Required:',
                       ),

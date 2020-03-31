@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 
 import '../Namaz/namaz_choose.dart';
 
@@ -8,11 +8,23 @@ class NamazDetails extends StatelessWidget {
   static String id = 'namaz_details';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+    appBar: AppBar(
+        automaticallyImplyLeading: true,
+        backgroundColor: Color(0xBF3C2E7F),
+        leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context)
+        )
+    ),
+      backgroundColor: Color(0xBF3C2E7F),
+
+
+
+    body:  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hostel Details',
       home: NamazScreen(),
-    );
+    ));
   }
 }
 
@@ -29,7 +41,7 @@ class _NamazScreenState extends State<NamazScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/masjid.png',
             ),
             NamazChoose(),

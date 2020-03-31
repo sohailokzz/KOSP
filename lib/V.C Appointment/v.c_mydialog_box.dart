@@ -1,4 +1,4 @@
-import 'package:KustSmartApp/Home_page_and_menue_page/home_page.dart';
+import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

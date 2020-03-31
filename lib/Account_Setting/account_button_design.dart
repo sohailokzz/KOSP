@@ -1,5 +1,5 @@
-import 'package:KustSmartApp/account_setting/sign_in.dart';
-import 'package:KustSmartApp/account_setting/sign_up.dart';
+import 'package:kust_online/account_setting/sign_in.dart';
+import 'package:kust_online/account_setting/sign_up.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +51,7 @@ class AccountInfo extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: kMyButton(
+                            child: KMyButton(
                               label: 'My Account',
                               size: 20.0,
                               onPress: () {
@@ -67,7 +67,7 @@ class AccountInfo extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: kMyButton(
+                            child: KMyButton(
                               label: 'Sign In',
                               size: 20.0,
                               onPress: () {
@@ -83,7 +83,7 @@ class AccountInfo extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: kMyButton(
+                            child: KMyButton(
                               label: 'Sign Up',
                               size: 20.0,
                               onPress: () {

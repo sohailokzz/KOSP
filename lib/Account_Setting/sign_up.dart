@@ -1,8 +1,8 @@
-import 'package:KustSmartApp/account_setting/signup_registration_form.dart';
+import 'package:kust_online/account_setting/signup_registration_form.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
-import 'package:KustSmartApp/Home_page_and_menue_page/home_page.dart';
+import 'package:kust_online/constant.dart';
+import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
 
 class AccountDetails extends StatelessWidget {
   static String id = 'account_details';
@@ -33,7 +33,7 @@ class _AccountRegistrationFormState extends State<AccountRegistrationForm> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/lostfound.jpg',
             ),
             RegistraionForm(),

@@ -7,6 +7,7 @@ class KUSTInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Color(0xBF3C2E7F),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -48,7 +49,7 @@ class KUSTInfo extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: kMyButton(
+                            child: KMyButton(
 
                               label: 'Website',
                               size: 20.0,
@@ -62,7 +63,7 @@ class KUSTInfo extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: kMyButton(
+                            child: KMyButton(
                               label: 'Semester Rules',
                               size: 20.0,
                             ),
@@ -75,7 +76,7 @@ class KUSTInfo extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: kMyButton(
+                            child: KMyButton(
                               label: 'Calender',
                               size: 20.0,
                             ),

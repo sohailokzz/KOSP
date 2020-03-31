@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
-
-import 'auditorium_requests.dart';
+import 'package:kust_online/constant.dart';
 import 'event_card.dart';
 
 class AudiEventDetails extends StatelessWidget {

@@ -1,9 +1,10 @@
+import 'package:kust_online/Notification_Bell/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import '../V.C Appointment/v.c_appointment.dart';
 import '../About_Kust/abt_kust.dart';
-import 'package:KustSmartApp/Auditoriums/auditoriums_screen.dart';
+import 'package:kust_online/Auditoriums/auditoriums_screen.dart';
 import '../Lost_Found/lostfound.dart';
 import '../Hostel/hostel_detail.dart';
 import '../Bus/bus_details.dart';
@@ -11,11 +12,15 @@ import '../Namaz/namaz_details.dart';
 import '../Cafe/cafe_details.dart';
 import '../Parking_Registration/parking_registration.dart';
 import '../Complaint_box/complaint_box.dart';
-import 'package:KustSmartApp/account_setting/account.dart';
+import 'package:kust_online/account_setting/account.dart';
 
 import 'my_menue.dart';
 
+
+
 class HomePage extends StatelessWidget {
+  static String id = "homepage";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,6 +39,9 @@ class HomePage extends StatelessWidget {
         ComplaintBox.id: (context) => ComplaintBox(),
         VCAppointment.id: (context) => VCAppointment(),
         AboutAccount.id: (context) => AboutAccount(),
+        Notifications.id: (context) => Notifications(),
+
+
       },
     );
   }
@@ -56,7 +64,7 @@ class _MenuState extends State<Menu> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/menubackground.jpg',
             ),
             MyMenu(),
@@ -66,7 +74,5 @@ class _MenuState extends State<Menu> {
     );
   }
 }
-
-
 
 //0xBAFFFFFFFF

@@ -1,21 +1,35 @@
-import 'package:KustSmartApp/Parking_Registration/vehicle_form.dart';
+import 'package:kust_online/Parking_Registration/vehicle_form.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import '../Home_page_and_menue_page/home_page.dart';
+
 
 class ParkingDetails extends StatelessWidget {
   static String id = 'parking_details';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+      appBar: AppBar(
+          automaticallyImplyLeading: true,
+          backgroundColor: Color(0xBF3C2E7F),
+          leading: IconButton(icon: Icon(Icons.arrow_back),
+              onPressed: () => Navigator.pop(context)
+          )
+      ),
+      backgroundColor: Color(0xBF3C2E7F),
+
+     body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Parking Details',
       home: ParkingRegistrationForm(),
       routes: {
         '/homepage': (context) => HomePage(),
       },
+    )
     );
+
+
   }
 }
 
@@ -33,7 +47,7 @@ class _ParkingRegistrationFormState extends State<ParkingRegistrationForm> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/lostfound.jpg',
             ),
             VehicelForm(),
@@ -50,12 +64,12 @@ class _ParkingRegistrationFormState extends State<ParkingRegistrationForm> {
 
 enum Category { faculty, admin, student }
 
-class kRadioButton extends StatefulWidget {
+class KRadioButton extends StatefulWidget {
   @override
-  _kRadioButtonState createState() => _kRadioButtonState();
+  _KRadioButtonState createState() => _KRadioButtonState();
 }
 
-class _kRadioButtonState extends State<kRadioButton> {
+class _KRadioButtonState extends State<KRadioButton> {
   Category _character = Category.faculty;
 
   @override

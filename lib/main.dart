@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/Splash_Screen/splash_screen.dart';
+import 'package:kust_online/Splash_Screen/splash_screen.dart';
 
 import 'Splash_Screen/splash_screen.dart';
 
@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'SplashScreen',
       home: SplashScreen(),
+
     );
   }
 }

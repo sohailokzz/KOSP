@@ -1,5 +1,5 @@
-import 'package:KustSmartApp/Auditoriums/auditorium_dialoguebox.dart';
-import 'package:KustSmartApp/Parking_Registration/parking_registration.dart';
+import 'package:kust_online/Auditoriums/auditorium_dialoguebox.dart';
+import 'package:kust_online/Parking_Registration/parking_registration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +48,7 @@ class AppointmentInfo extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
@@ -62,7 +62,7 @@ class AppointmentInfo extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Department:',
                         icon: Icons.school,
                       ),
@@ -76,11 +76,11 @@ class AppointmentInfo extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Category:',
                       ),
-                      kRadioButton(),
-                      kReusableName(
+                      KRadioButton(),
+                      KReusableName(
                         nameField: 'Description:',
                       ),
                       TextField(

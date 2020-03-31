@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:KustSmartApp/Auditoriums/post_card_admin.dart';
+import 'package:kust_online/Auditoriums/post_card_admin.dart';
 
-import 'auditorium_requests.dart';
 
 class EventCardAdmin extends StatelessWidget {
   @override

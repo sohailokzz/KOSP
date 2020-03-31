@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 
 import '../Bus/bus_choose.dart';
 import 'bus_choose.dart';
@@ -9,10 +9,20 @@ class BusDetails extends StatelessWidget {
   static String id = 'bus_details';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+     appBar: AppBar(
+         automaticallyImplyLeading: true,
+         backgroundColor: Color(0xBF3C2E7F),
+         leading: IconButton(icon: Icon(Icons.arrow_back),
+             onPressed: () => Navigator.pop(context)
+         )
+     ),
+      backgroundColor: Color(0xBF3C2E7F),
+     body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hostel Details',
       home: BusScreen(),
+    )
     );
   }
 }
@@ -30,7 +40,7 @@ class _BusScreenState extends State<BusScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/busback.jpg',
             ),
             BusChoose(),

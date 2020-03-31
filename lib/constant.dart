@@ -7,8 +7,8 @@ const TextStyle ktextStyle = TextStyle(
   fontSize: 11.0,
 );
 
-class kReusableButton extends StatelessWidget {
-  kReusableButton({this.cardChild, this.onPress});
+class KReusableButton extends StatelessWidget {
+  KReusableButton({this.cardChild, this.onPress});
 
   final Widget cardChild;
   final Function onPress;
@@ -29,8 +29,8 @@ class kReusableButton extends StatelessWidget {
   }
 }
 
-class kIconContent extends StatelessWidget {
-  kIconContent({this.label, this.assetImage, this.color});
+class KIconContent extends StatelessWidget {
+  KIconContent({this.label, this.assetImage, this.color});
   final String label;
   final String assetImage;
   final Color color;
@@ -56,8 +56,8 @@ class kIconContent extends StatelessWidget {
   }
 }
 
-class kBackground extends StatelessWidget {
-  kBackground({this.assetImage});
+class KBackground extends StatelessWidget {
+  KBackground({this.assetImage});
   final String assetImage;
   @override
   Widget build(BuildContext context) {
@@ -74,8 +74,8 @@ class kBackground extends StatelessWidget {
   }
 }
 
-class kMyButton extends StatelessWidget {
-  kMyButton({this.label, this.size, this.onPress});
+class KMyButton extends StatelessWidget {
+  KMyButton({this.label, this.size, this.onPress});
   final String label;
   final double size;
   final Function onPress;
@@ -100,8 +100,8 @@ class kMyButton extends StatelessWidget {
   }
 }
 
-class kReusableName extends StatelessWidget {
-  kReusableName({this.nameField, this.icon});
+class KReusableName extends StatelessWidget {
+  KReusableName({this.nameField, this.icon});
 
   final String nameField;
   final IconData icon;

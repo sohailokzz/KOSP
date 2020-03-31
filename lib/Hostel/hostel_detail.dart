@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'hostel_choose.dart';
 
 class HostelDetails extends StatelessWidget {
   static String id = 'hostel_details';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+    appBar: AppBar(
+        automaticallyImplyLeading: true,
+        backgroundColor: Color(0xBF3C2E7F),
+        leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context)
+        )
+    ),
+      backgroundColor: Color(0xBF3C2E7F),
+    body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hostel Details',
       home: HostelScreen(),
+    )
     );
   }
 }
@@ -27,7 +37,7 @@ class _HostelScreenState extends State<HostelScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/hostel.jpg',
             ),
             HostelChoose(),

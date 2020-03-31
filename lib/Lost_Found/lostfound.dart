@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'choose_lost_found.dart';
 import 'i_lost.dart';
 import 'i_found.dart';
@@ -8,7 +8,17 @@ class LostFound extends StatelessWidget {
   static String id = 'lost_found';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+    appBar: AppBar(
+        automaticallyImplyLeading: true,
+        backgroundColor: Color(0xBF3C2E7F),
+        leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context)
+        )
+    ),
+      backgroundColor: Color(0xBF3C2E7F),
+
+    body:  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Lost & Found',
       home: LostFoundFront(),
@@ -16,6 +26,7 @@ class LostFound extends StatelessWidget {
         ILost.id: (context) => ILost(),
         IFound.id: (context) => IFound(),
       },
+    )
     );
   }
 }
@@ -33,7 +44,7 @@ class _LostFoundFrontState extends State<LostFoundFront> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/lostfound.jpg',
             ),
             LostFoundChoose(),

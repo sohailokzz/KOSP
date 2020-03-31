@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../Home_page_and_menue_page/home_page.dart';
 import 'dart:async';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -52,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   final purpleOpicity = Container(
-    color: Color(0xD13C2E7F),
+    color: Color(0xD34C2E7F),
   );
 
   final motiveText = Text(
@@ -101,7 +101,7 @@ class _SplashScreenState extends State<SplashScreen>
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/splashimage.jpg',
             ),
             purpleOpicity,

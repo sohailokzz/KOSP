@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'all_auditorium.dart';
 import 'main_auditorium.dart';
 import 'ioc_auditorium.dart';
@@ -13,7 +13,17 @@ class Auditorium extends StatelessWidget {
   static String id = 'auditorium';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+    appBar: AppBar(
+        automaticallyImplyLeading: true,
+        backgroundColor: Color(0xBF3C2E7F),
+        leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context)
+        )
+    ),
+      backgroundColor: Color(0xBF3C2E7F),
+
+      body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Auditoriums',
       home: Auditoriums(),
@@ -26,6 +36,7 @@ class Auditorium extends StatelessWidget {
         ChemistryAudiDetails.id: (context) => ChemistryAudiDetails(),
         IBSAudiDetails.id: (context) => IBSAudiDetails(),
       },
+    )
     );
   }
 }
@@ -43,7 +54,7 @@ class _AuditoriumsState extends State<Auditoriums> {
           child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          kBackground(
+          KBackground(
             assetImage: 'assets/auditorium.jpg',
           ),
           AllAuditorium(),
@@ -66,7 +77,7 @@ class ReusableRow extends StatelessWidget {
     return Row(
       children: <Widget>[
         Expanded(
-          child: kMyButton(
+          child: KMyButton(
             label: label1,
             size: 17.0,
             onPress: route1,
@@ -76,7 +87,7 @@ class ReusableRow extends StatelessWidget {
           width: 20.0,
         ),
         Expanded(
-          child: kMyButton(
+          child: KMyButton(
             label: label2,
             size: 17.0,
             onPress: route1,

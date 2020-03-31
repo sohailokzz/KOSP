@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'auditoriums_constants.dart';
 
 class MainAudiDetails extends StatelessWidget {
   static String id = 'main_auditorium';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Main Auditorium',
       home: MainAudiScreen(),
     );
+
   }
 }
 
@@ -27,10 +28,10 @@ class _MainAudiScreenState extends State<MainAudiScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/auditorium.jpg',
             ),
-            kAuditoriumCheck(
+            KAuditoriumCheck(
               mainLabel: 'Main Auditorium',
             ),
           ],

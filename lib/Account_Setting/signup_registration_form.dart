@@ -1,4 +1,4 @@
-import 'package:KustSmartApp/Auditoriums/auditorium_dialoguebox.dart';
+import 'package:kust_online/Auditoriums/auditorium_dialoguebox.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -58,7 +58,7 @@ class RegistraionForm extends StatelessWidget {
                           ),
                         ),
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
@@ -73,7 +73,7 @@ class RegistraionForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'UserName:',
                         icon: Icons.person,
                       ),
@@ -87,7 +87,7 @@ class RegistraionForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Password:',
                         icon: Icons.lock,
                       ),

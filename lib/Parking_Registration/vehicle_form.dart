@@ -1,4 +1,5 @@
-import 'package:KustSmartApp/Parking_Registration/parking_registration.dart';
+import 'package:kust_online/Home_page_and_menue_page/my_menue.dart';
+import 'package:kust_online/Parking_Registration/parking_registration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../constant.dart';
@@ -8,6 +9,7 @@ class VehicelForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Color(0xBF3C2E7F),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -58,7 +60,7 @@ class VehicelForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Name:',
                         icon: Icons.person,
                       ),
@@ -72,7 +74,7 @@ class VehicelForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Father Name:',
                         icon: Icons.person,
                       ),
@@ -86,7 +88,7 @@ class VehicelForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         icon: Icons.credit_card,
                         nameField: 'CNIC:',
                       ),
@@ -100,7 +102,7 @@ class VehicelForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Residence:',
                         icon: Icons.home,
                       ),
@@ -114,11 +116,11 @@ class VehicelForm extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Category:',
                       ),
-                      kRadioButton(),
-                      kReusableName(
+                      KRadioButton(),
+                      KReusableName(
                         nameField: 'Attachment:',
                         icon: Icons.attach_file,
                       ),
@@ -132,16 +134,16 @@ class VehicelForm extends StatelessWidget {
                       SizedBox(
                         height: 30.0,
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Required:',
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Vehicle Documents',
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'Student ID Copy',
                       ),
-                      kReusableName(
+                      KReusableName(
                         nameField: 'HOD Sign/Stamp Bank Recipt',
                       ),
                       SizedBox(

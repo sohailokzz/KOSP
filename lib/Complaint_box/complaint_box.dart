@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/Parking_Registration/parking_registration.dart';
-import 'package:KustSmartApp/constant.dart';
-import '../Home_page_and_menue_page/home_page.dart';
+import 'package:kust_online/constant.dart';
 import 'complaint-info.dart';
 
 class ComplaintBox extends StatelessWidget {
   static String id = 'complaint_box';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  Scaffold(
+      appBar: AppBar(
+          automaticallyImplyLeading: true,
+        backgroundColor: Color(0xBF3C2E7F),
+        leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context)
+        )
+    ),
+    backgroundColor: Color(0xBF3C2E7F),
+
+    body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Complaint Box',
       home: Complaint(),
+    )
     );
   }
 }
@@ -29,7 +38,7 @@ class _ComplaintState extends State<Complaint> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/abtkust.jpg',
             ),
             ComplaintInfo(),

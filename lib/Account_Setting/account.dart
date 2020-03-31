@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
-import 'account_information.dart';
+import 'package:kust_online/constant.dart';
+import 'account_button_design.dart';
 import 'sign_up.dart';
 import 'sign_in.dart';
 import 'my_account.dart';
@@ -9,7 +9,17 @@ class AboutAccount extends StatelessWidget {
   static String id = 'about_account';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+      appBar: AppBar(
+          automaticallyImplyLeading: true,
+          backgroundColor: Color(0xBF3C2E7F),
+          leading: IconButton(icon: Icon(Icons.arrow_back),
+              onPressed: () => Navigator.pop(context)
+          )
+      ),
+        backgroundColor: Color(0xBF3C2E7F),
+
+      body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'About Account',
       home: AccountFront(),
@@ -18,6 +28,7 @@ class AboutAccount extends StatelessWidget {
         SingIn.id: (context) => SingIn(),
         MyAccount.id: (context) => MyAccount(),
       },
+    )
     );
   }
 }
@@ -35,7 +46,7 @@ class _AccountFronttate extends State<AccountFront> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/abtkust.jpg',
             ),
             AccountInfo(),

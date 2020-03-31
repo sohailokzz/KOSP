@@ -1,17 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/constant.dart';
 import 'create_post.dart';
 
 class IFound extends StatelessWidget {
   static String id = 'i_found';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'I Found',
       home: IFoundFront(),
     );
+
   }
 }
 

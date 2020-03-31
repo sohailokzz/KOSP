@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
+import 'package:kust_online/V.C%20Appointment/v.c_appointment.dart';
+import 'package:kust_online/constant.dart';
 
 import 'cafe_choose.dart';
 
@@ -7,10 +8,21 @@ class CafeDetails extends StatelessWidget {
   static String id = 'cafe_details';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+      appBar: AppBar(
+          automaticallyImplyLeading: true,
+          backgroundColor: Color(0xBF3C2E7F),
+          leading: IconButton(icon: Icon(Icons.arrow_back),
+              onPressed: () => Navigator.pop(context)
+          )
+      ),
+      backgroundColor: Color(0xBF3C2E7F),
+
+    body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hostel Details',
       home: CafeScreen(),
+    )
     );
   }
 }
@@ -28,7 +40,7 @@ class _CafeScreenState extends State<CafeScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/cafemain.jpg',
             ),
             CafeChoose(),

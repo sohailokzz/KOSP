@@ -8,6 +8,7 @@ class LostFoundChoose extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Color(0xBF3C2E7F),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -51,7 +52,7 @@ class LostFoundChoose extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: kMyButton(
+                            child: KMyButton(
                               label: 'I Lost',
                               size: 20.0,
                               onPress: () {
@@ -67,7 +68,7 @@ class LostFoundChoose extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: kMyButton(
+                            child: KMyButton(
                               label: 'I Found',
                               size: 20.0,
                               onPress: () {

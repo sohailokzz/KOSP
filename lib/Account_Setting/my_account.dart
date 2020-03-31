@@ -1,8 +1,8 @@
-import 'package:KustSmartApp/account_setting/profile.dart';
+import 'package:kust_online/account_setting/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:KustSmartApp/constant.dart';
-import 'package:KustSmartApp/Home_page_and_menue_page/home_page.dart';
+import 'package:kust_online/constant.dart';
+import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
 
 class MyAccount extends StatelessWidget {
   static String id = 'my_account';
@@ -32,7 +32,7 @@ class _MyAccountFrontState extends State<MyAccountFront> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            kBackground(
+            KBackground(
               assetImage: 'assets/lostfound.jpg',
             ),
             Profile(),

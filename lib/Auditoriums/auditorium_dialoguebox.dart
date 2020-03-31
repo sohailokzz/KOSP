@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../constant.dart';
 import 'auditoriums_screen.dart';
 
