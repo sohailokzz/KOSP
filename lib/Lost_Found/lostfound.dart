@@ -9,25 +9,16 @@ class LostFound extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-        automaticallyImplyLeading: true,
         backgroundColor: Color(0xBF3C2E7F),
-        leading: IconButton(icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context)
-        )
-    ),
-      backgroundColor: Color(0xBF3C2E7F),
-
-    body:  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Lost & Found',
-      home: LostFoundFront(),
-      routes: {
-        ILost.id: (context) => ILost(),
-        IFound.id: (context) => IFound(),
-      },
-    )
-    );
+        body: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Lost & Found',
+          home: LostFoundFront(),
+          routes: {
+            ILost.id: (context) => ILost(),
+            IFound.id: (context) => IFound(),
+          },
+        ));
   }
 }
 
@@ -54,5 +45,3 @@ class _LostFoundFrontState extends State<LostFoundFront> {
     );
   }
 }
-
-

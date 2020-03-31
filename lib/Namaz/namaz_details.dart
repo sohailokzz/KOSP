@@ -9,22 +9,12 @@ class NamazDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-        automaticallyImplyLeading: true,
         backgroundColor: Color(0xBF3C2E7F),
-        leading: IconButton(icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context)
-        )
-    ),
-      backgroundColor: Color(0xBF3C2E7F),
-
-
-
-    body:  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hostel Details',
-      home: NamazScreen(),
-    ));
+        body: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Hostel Details',
+          home: NamazScreen(),
+        ));
   }
 }
 
@@ -51,8 +41,6 @@ class _NamazScreenState extends State<NamazScreen> {
     );
   }
 }
-
-
 
 class ReusableNamazRow extends StatelessWidget {
   ReusableNamazRow({this.nameNamaz, this.timing, this.location});

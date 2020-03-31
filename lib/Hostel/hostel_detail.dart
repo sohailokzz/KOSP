@@ -7,19 +7,12 @@ class HostelDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Color(0xBF3C2E7F),
-        leading: IconButton(icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context)
-        )
-    ),
       backgroundColor: Color(0xBF3C2E7F),
-    body: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hostel Details',
-      home: HostelScreen(),
-    )
+      body: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Hostel Details',
+        home: HostelScreen(),
+      ),
     );
   }
 }
@@ -47,8 +40,6 @@ class _HostelScreenState extends State<HostelScreen> {
     );
   }
 }
-
-
 
 class ReusableHostelRow extends StatelessWidget {
   ReusableHostelRow({this.hostelName});

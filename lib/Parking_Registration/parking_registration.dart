@@ -4,32 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 import '../Home_page_and_menue_page/home_page.dart';
 
-
 class ParkingDetails extends StatelessWidget {
   static String id = 'parking_details';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          automaticallyImplyLeading: true,
-          backgroundColor: Color(0xBF3C2E7F),
-          leading: IconButton(icon: Icon(Icons.arrow_back),
-              onPressed: () => Navigator.pop(context)
-          )
-      ),
-      backgroundColor: Color(0xBF3C2E7F),
-
-     body: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Parking Details',
-      home: ParkingRegistrationForm(),
-      routes: {
-        '/homepage': (context) => HomePage(),
-      },
-    )
-    );
-
-
+        backgroundColor: Color(0xBF3C2E7F),
+        body: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Parking Details',
+          home: ParkingRegistrationForm(),
+          routes: {
+            '/homepage': (context) => HomePage(),
+          },
+        ));
   }
 }
 
@@ -57,10 +45,6 @@ class _ParkingRegistrationFormState extends State<ParkingRegistrationForm> {
     );
   }
 }
-
-
-
-
 
 enum Category { faculty, admin, student }
 

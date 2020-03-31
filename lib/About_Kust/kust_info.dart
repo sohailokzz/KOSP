@@ -7,7 +7,6 @@ class KUSTInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Color(0xBF3C2E7F),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -18,7 +17,7 @@ class KUSTInfo extends StatelessWidget {
                   height: 300,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFF3B2E7E),
+                    color: Color(0xBAFFFFFF),
                   ),
                   child: Column(
                     children: <Widget>[
@@ -37,9 +36,9 @@ class KUSTInfo extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(25.0, 330.0, 25.0, 16.0),
+                  margin: EdgeInsets.fromLTRB(25.0, 250.0, 25.0, 16.0),
                   decoration: BoxDecoration(
-                    color: Color(0xFF3B0E7E),
+                    color: Color(0xBAFFFFFF),
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   padding: const EdgeInsets.all(16.0),
@@ -50,7 +49,6 @@ class KUSTInfo extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: KMyButton(
-
                               label: 'Website',
                               size: 20.0,
                             ),

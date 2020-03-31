@@ -42,5 +42,3 @@ class _MyAccountFrontState extends State<MyAccountFront> {
     );
   }
 }
-
-

@@ -14,16 +14,7 @@ class Auditorium extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Color(0xBF3C2E7F),
-        leading: IconButton(icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context)
-        )
-    ),
-      backgroundColor: Color(0xBF3C2E7F),
-
-      body: MaterialApp(
+        body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Auditoriums',
       home: Auditoriums(),
@@ -36,8 +27,7 @@ class Auditorium extends StatelessWidget {
         ChemistryAudiDetails.id: (context) => ChemistryAudiDetails(),
         IBSAudiDetails.id: (context) => IBSAudiDetails(),
       },
-    )
-    );
+    ));
   }
 }
 
@@ -50,8 +40,7 @@ class _AuditoriumsState extends State<Auditoriums> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: Stack(
+      body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
           KBackground(
@@ -59,12 +48,10 @@ class _AuditoriumsState extends State<Auditoriums> {
           ),
           AllAuditorium(),
         ],
-      )),
+      ),
     );
   }
 }
-
-
 
 class ReusableRow extends StatelessWidget {
   ReusableRow({this.label1, this.label2, this.route1, this.route2});
