@@ -10,10 +10,10 @@ class Notifications extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Color(0xBF3C2E7F),
       appBar: AppBar(
           automaticallyImplyLeading: true,
-          backgroundColor: Color(0xBF3C2E7F) ,
+          backgroundColor: Color(0xBF3C2E7F),
           leading: IconButton(icon: Icon(Icons.arrow_back),
               color: Colors.white,
               onPressed: () => Navigator.pop(context),
@@ -29,17 +29,19 @@ class Notifications extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Center(
-
                   child: Text(
                     'Notifications',
+
                     style: ktextStyle.copyWith(
                       fontSize: 25.0,
-                      color: Colors.deepPurpleAccent
+                      backgroundColor: Color(0xBF3C2E7F),
                     ),
                   ),
                 ),
+
                 Card(
-                  color: Colors.white,
+
+                  color: Colors.white60,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(60.0),
@@ -60,7 +62,7 @@ class Notifications extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 16.0, top: 16.0),
+                        padding: const EdgeInsets.only(left: 16.0, top: 20.0),
                         child: Row(
                           children: <Widget>[
                             CircleAvatar(
@@ -69,7 +71,7 @@ class Notifications extends StatelessWidget {
                               backgroundImage: AssetImage('assets/logo.gif'),
                             ),
                             SizedBox(
-                              width: 10.0,
+                              width: 15.0,
                             ),
                             Text(
                               'From V.C',
