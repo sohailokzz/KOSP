@@ -26,14 +26,6 @@ class _AbtKUSTState extends State<AbtKUST> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Color(0xFF3B2E7E),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
       body: SafeArea(
         child: Stack(
           fit: StackFit.expand,
