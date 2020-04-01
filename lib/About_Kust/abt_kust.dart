@@ -8,12 +8,13 @@ class AboutKUST extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xBF3C2E7F),
-        body: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'About KUST',
-          home: AbtKUST(),
-        ));
+      backgroundColor: Color(0xBF3C2E7F),
+      body: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'About KUST',
+        home: AbtKUST(),
+      ),
+    );
   }
 }
 

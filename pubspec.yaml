@@ -12,7 +12,7 @@ dependencies:
 
 
   cupertino_icons: ^0.1.2
-  webview_flutter:
+
 
 dev_dependencies:
   flutter_test:
