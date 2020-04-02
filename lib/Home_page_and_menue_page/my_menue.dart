@@ -39,6 +39,8 @@ class MyMenu extends StatelessWidget {
 
           ),
 
+
+
           IconButton(
             icon: Icon(
               Icons.person_pin,
@@ -62,6 +64,7 @@ class MyMenu extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Color(0xFF3B2E7E),
                   ),
+
                   child: Column(
                     children: <Widget>[
                       Image.asset('assets/promotion.png'),

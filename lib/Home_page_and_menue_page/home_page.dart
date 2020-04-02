@@ -40,6 +40,7 @@ class HomePage extends StatelessWidget {
         VCAppointment.id: (context) => VCAppointment(),
         AboutAccount.id: (context) => AboutAccount(),
         Notifications.id: (context) => Notifications(),
+        MyMenu.id:(context)=>MyMenu(),
 
 
       },
@@ -63,16 +64,23 @@ class _MenuState extends State<Menu> {
       body: SafeArea(
         child: Stack(
           fit: StackFit.expand,
+
           children: <Widget>[
             KBackground(
               assetImage: 'assets/menubackground.jpg',
             ),
             MyMenu(),
+
           ],
         ),
+
       ),
     );
+
   }
+
+
 }
+
 
 //0xBAFFFFFFFF

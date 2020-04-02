@@ -6,7 +6,7 @@ class EnglishAudiDetails extends StatelessWidget {
   static String id = 'english_auditorium';
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'English Auditorium',
       home: EnglishAudiScreen(),
@@ -24,6 +24,8 @@ class _EnglishAudiScreenState extends State<EnglishAudiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
       body: SafeArea(
         child: Stack(
           fit: StackFit.expand,

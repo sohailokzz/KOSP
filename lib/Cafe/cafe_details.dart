@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kust_online/V.C%20Appointment/v.c_appointment.dart';
 import 'package:kust_online/constant.dart';
 
 import 'cafe_choose.dart';
@@ -9,6 +8,16 @@ class CafeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: true,
+          backgroundColor: Color(0xBF3C2E7F),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ),
+
+
         backgroundColor: Color(0xBF3C2E7F),
         body: MaterialApp(
           debugShowCheckedModeBanner: false,

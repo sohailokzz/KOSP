@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
+import 'package:webview_flutter/webview_flutter.dart';
 import '../constant.dart';
 
 class KUSTInfo extends StatelessWidget {
@@ -17,7 +17,7 @@ class KUSTInfo extends StatelessWidget {
                   height: 300,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xBAFFFFFF),
+                    color: Color(0xBF3C2E7F),
                   ),
                   child: Column(
                     children: <Widget>[
@@ -36,7 +36,7 @@ class KUSTInfo extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(25.0, 250.0, 25.0, 16.0),
+                  margin: EdgeInsets.fromLTRB(25.0, 275.0, 25.0, 16.0),
                   decoration: BoxDecoration(
                     color: Color(0xBAFFFFFF),
                     borderRadius: BorderRadius.circular(15.0),
@@ -51,19 +51,28 @@ class KUSTInfo extends StatelessWidget {
                             child: KMyButton(
                               label: 'Website',
                               size: 20.0,
+                     onPress: (){
+                                _handleURLButtonPress(context, "https://www.kust.edu.pk");
+                             },
                             ),
                           ),
-                        ],
+                       ]
+
                       ),
+
                       SizedBox(
                         height: 20.0,
                       ),
                       Row(
                         children: <Widget>[
                           Expanded(
+
                             child: KMyButton(
                               label: 'Semester Rules',
                               size: 20.0,
+                            onPress: (){
+
+                            },
                             ),
                           ),
                         ],
@@ -77,6 +86,10 @@ class KUSTInfo extends StatelessWidget {
                             child: KMyButton(
                               label: 'Calender',
                               size: 20.0,
+
+                            onPress: (){
+
+                            },
                             ),
                           ),
                         ],
@@ -91,4 +104,45 @@ class KUSTInfo extends StatelessWidget {
       ),
     );
   }
+}
+
+
+
+
+class WebViewContainer extends StatefulWidget {
+  final url;
+
+  WebViewContainer(this.url);
+
+  @override
+  createState() => _WebViewContainerState(this.url);
+}
+
+class _WebViewContainerState extends State<WebViewContainer> {
+   var _url;
+  final _key = UniqueKey();
+
+  _WebViewContainerState(this._url);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(
+          children: [
+            Expanded(
+                child: WebView(
+                    key: _key,
+                    javascriptMode: JavascriptMode.unrestricted,
+                    initialUrl: "https://www.kust.edu.pk"
+                ),
+            )
+          ],
+        )
+    );
+  }
+
+}
+void _handleURLButtonPress(BuildContext context, String url) {
+  Navigator.push(context,
+      MaterialPageRoute(builder: (context) => WebViewContainer(url)));
 }

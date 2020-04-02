@@ -11,23 +11,35 @@ import 'ibs_auditorium.dart';
 
 class Auditorium extends StatelessWidget {
   static String id = 'auditorium';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xBF3C2E7F),
+          actions: <Widget>[
+            FlatButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
+        ),
+        backgroundColor: Color(0xBF3C2E7F),
         body: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Auditoriums',
-      home: Auditoriums(),
-      routes: {
-        MainAudiDetails.id: (context) => MainAudiDetails(),
-        IOCAudiDetails.id: (context) => IOCAudiDetails(),
-        MathsAudiDetails.id: (context) => MathsAudiDetails(),
-        EnglishAudiDetails.id: (context) => EnglishAudiDetails(),
-        PhysicsAudiDetails.id: (context) => PhysicsAudiDetails(),
-        ChemistryAudiDetails.id: (context) => ChemistryAudiDetails(),
-        IBSAudiDetails.id: (context) => IBSAudiDetails(),
-      },
-    ));
+          debugShowCheckedModeBanner: false,
+          title: 'Auditoriums',
+          home: Auditoriums(),
+          routes: {
+            MainAudiDetails.id: (context) => MainAudiDetails(),
+            IOCAudiDetails.id: (context) => IOCAudiDetails(),
+            MathsAudiDetails.id: (context) => MathsAudiDetails(),
+            EnglishAudiDetails.id: (context) => EnglishAudiDetails(),
+            PhysicsAudiDetails.id: (context) => PhysicsAudiDetails(),
+            ChemistryAudiDetails.id: (context) => ChemistryAudiDetails(),
+            IBSAudiDetails.id: (context) => IBSAudiDetails(),
+          },
+        ));
   }
 }
 
@@ -55,10 +67,12 @@ class _AuditoriumsState extends State<Auditoriums> {
 
 class ReusableRow extends StatelessWidget {
   ReusableRow({this.label1, this.label2, this.route1, this.route2});
+
   final String label1;
   final String label2;
   final Function route1;
   final Function route2;
+
   @override
   Widget build(BuildContext context) {
     return Row(

@@ -8,14 +8,17 @@ class MyAccount extends StatelessWidget {
   static String id = 'my_account';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Scaffold(
+    body: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Account Details',
       home: MyAccountFront(),
       routes: {
         '/homepage': (context) => HomePage(),
       },
+    ) ,
     );
+
   }
 }
 

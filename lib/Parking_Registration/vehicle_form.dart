@@ -1,4 +1,3 @@
-import 'package:kust_online/Home_page_and_menue_page/my_menue.dart';
 import 'package:kust_online/Parking_Registration/parking_registration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,14 +8,7 @@ class VehicelForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Color(0xBF3C2E7F),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
+
       backgroundColor: Color(0xBF3C2E7F),
       body: SingleChildScrollView(
         child: SafeArea(
