@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:kust_online/About_Kust/webview_classes.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../constant.dart';
 
@@ -45,34 +46,28 @@ class KUSTInfo extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: KMyButton(
-                              label: 'Website',
-                              size: 20.0,
-                     onPress: (){
-                                _handleURLButtonPress(context, "https://www.kust.edu.pk");
-                             },
-                            ),
+                      Row(children: <Widget>[
+                        Expanded(
+                          child: KMyButton(
+                            label: 'Website',
+                            size: 20.0,
+                            onPress: () {
+                              _handleURLButtonPressWebsite(
+                                  context, "https://www.kust.edu.pk");
+                            },
                           ),
-                       ]
-
-                      ),
-
+                        ),
+                      ]),
                       SizedBox(
                         height: 20.0,
                       ),
                       Row(
                         children: <Widget>[
                           Expanded(
-
                             child: KMyButton(
                               label: 'Semester Rules',
                               size: 20.0,
-                            onPress: (){
-
-                            },
+                              onPress: () {},
                             ),
                           ),
                         ],
@@ -86,10 +81,10 @@ class KUSTInfo extends StatelessWidget {
                             child: KMyButton(
                               label: 'Calender',
                               size: 20.0,
-
-                            onPress: (){
-
-                            },
+                              onPress: () {
+                                _hendleURLButtonPressCalendar(context,
+                                    "https://kust.edu.pk/web/index.php/academic-calendar-2019-2020");
+                              },
                             ),
                           ),
                         ],
@@ -106,43 +101,12 @@ class KUSTInfo extends StatelessWidget {
   }
 }
 
-
-
-
-class WebViewContainer extends StatefulWidget {
-  final url;
-
-  WebViewContainer(this.url);
-
-  @override
-  createState() => _WebViewContainerState(this.url);
-}
-
-class _WebViewContainerState extends State<WebViewContainer> {
-   var _url;
-  final _key = UniqueKey();
-
-  _WebViewContainerState(this._url);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-                child: WebView(
-                    key: _key,
-                    javascriptMode: JavascriptMode.unrestricted,
-                    initialUrl: "https://www.kust.edu.pk"
-                ),
-            )
-          ],
-        )
-    );
-  }
-
-}
-void _handleURLButtonPress(BuildContext context, String url) {
+void _handleURLButtonPressWebsite(BuildContext context, String url) {
   Navigator.push(context,
-      MaterialPageRoute(builder: (context) => WebViewContainer(url)));
+      MaterialPageRoute(builder: (context) => WebViewContainerWebsite(url)));
+}
+
+void _hendleURLButtonPressCalendar(BuildContext context, String url) {
+  Navigator.push(context,
+      MaterialPageRoute(builder: (context) => WebContainerCalendar(url)));
 }
