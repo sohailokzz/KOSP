@@ -8,13 +8,17 @@ class SingIn extends StatelessWidget {
   static String id = 'sign_in';
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'SignIn Details',
-      home: SignInForm(),
-      routes: {
-        '/homepage': (context) => HomePage(),
-      },
+    return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      backgroundColor: Color(0xBF3C2E7F),
+      body: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'SignIn Details',
+        home: SignInForm(),
+        routes: {
+          '/homepage': (context) => HomePage(),
+        },
+      ),
     );
   }
 }
@@ -28,6 +32,7 @@ class _SignInFormState extends State<SignInForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: SafeArea(
         child: Stack(
           fit: StackFit.expand,
@@ -42,5 +47,3 @@ class _SignInFormState extends State<SignInForm> {
     );
   }
 }
-
-

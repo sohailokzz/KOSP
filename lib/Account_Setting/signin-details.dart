@@ -16,6 +16,7 @@ class SingInDetails extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
       ),
+      resizeToAvoidBottomPadding: false,
       backgroundColor: Color(0xBF3C2E7F),
       body: SingleChildScrollView(
         child: SafeArea(

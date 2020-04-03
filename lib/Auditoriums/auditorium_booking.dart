@@ -7,7 +7,6 @@ class Booking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       debugShowCheckedModeBanner: false,
       title: 'Booking',
       home: BookingScreen(),
@@ -27,6 +26,7 @@ class _BookingScreenState extends State<BookingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: SafeArea(
         child: Stack(
           fit: StackFit.expand,
@@ -41,7 +41,3 @@ class _BookingScreenState extends State<BookingScreen> {
     );
   }
 }
-
-
-
-

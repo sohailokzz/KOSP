@@ -29,6 +29,7 @@ class _AccountRegistrationFormState extends State<AccountRegistrationForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: SafeArea(
         child: Stack(
           fit: StackFit.expand,
@@ -43,7 +44,3 @@ class _AccountRegistrationFormState extends State<AccountRegistrationForm> {
     );
   }
 }
-
-
-
-

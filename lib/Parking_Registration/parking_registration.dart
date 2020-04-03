@@ -9,6 +9,7 @@ class ParkingDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomPadding: false,
         backgroundColor: Color(0xBF3C2E7F),
         body: MaterialApp(
           debugShowCheckedModeBanner: false,

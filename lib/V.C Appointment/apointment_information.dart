@@ -9,6 +9,7 @@ class AppointmentInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         automaticallyImplyLeading: true,
         backgroundColor: Color(0xBF3C2E7F),

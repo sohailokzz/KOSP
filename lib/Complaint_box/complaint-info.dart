@@ -8,14 +8,6 @@ class ComplaintInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        backgroundColor: Color(0xBF3C2E7F),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
       backgroundColor: Color(0xBF3C2E7F),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -75,7 +67,6 @@ class ComplaintInfo extends StatelessWidget {
                       ),
                       TextField(
                         textAlign: TextAlign.center,
-                        onChanged: (value) {},
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Enter Event Department',
                         ),
