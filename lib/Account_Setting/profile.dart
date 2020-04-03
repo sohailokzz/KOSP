@@ -43,8 +43,12 @@ class Profile extends StatelessWidget {
                     color: Color(0xBAFFFFFF),
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  padding: const EdgeInsets.only(
-                      top: 5.0, left: 16.0, right: 16.0, bottom: 50.0),
+                  padding: EdgeInsets.only(
+                    top: 5.0,
+                    left: 16.0,
+                    right: 16.0,
+                    bottom: 50.0,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[

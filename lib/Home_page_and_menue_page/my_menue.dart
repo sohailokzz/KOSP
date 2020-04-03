@@ -15,32 +15,24 @@ import '../Hostel/hostel_detail.dart';
 import '../Namaz/namaz_details.dart';
 import '../Notification_Bell/notification_page.dart';
 
-
 class MyMenu extends StatelessWidget {
-  static String id="my_menu";
+  static String id = "my_menu";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: Color(0xFF3B2E7E),
+      backgroundColor: Color(0xBF3C2E7F),
       appBar: AppBar(
         backgroundColor: Color(0xFF3B2E7E),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
-              Icons.notifications,
-              color: Colors.white,
+              icon: Icon(
+                Icons.notifications,
+                color: Colors.white,
                 size: 30,
-            ),
-
-            onPressed:() {
-              Navigator.pushNamed(context, Notifications.id);
-
-            }
-
-          ),
-
-
-
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, Notifications.id);
+              }),
           IconButton(
             icon: Icon(
               Icons.person_pin,
@@ -64,7 +56,6 @@ class MyMenu extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Color(0xFF3B2E7E),
                   ),
-
                   child: Column(
                     children: <Widget>[
                       Image.asset('assets/promotion.png'),

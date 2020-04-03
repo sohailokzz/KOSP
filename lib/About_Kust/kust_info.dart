@@ -18,7 +18,7 @@ class KUSTInfo extends StatelessWidget {
                   height: 300,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xBF3C2E7F),
+                    color: Color(0xFF3B2E7E),
                   ),
                   child: Column(
                     children: <Widget>[
@@ -53,7 +53,9 @@ class KUSTInfo extends StatelessWidget {
                             size: 20.0,
                             onPress: () {
                               _handleURLButtonPressWebsite(
-                                  context, "https://www.kust.edu.pk");
+                                context,
+                                "https://www.kust.edu.pk",
+                              );
                             },
                           ),
                         ),
@@ -82,8 +84,10 @@ class KUSTInfo extends StatelessWidget {
                               label: 'Calender',
                               size: 20.0,
                               onPress: () {
-                                _hendleURLButtonPressCalendar(context,
-                                    "https://kust.edu.pk/web/index.php/academic-calendar-2019-2020");
+                                _handleURLButtonPressCalendar(
+                                  context,
+                                  "https://kust.edu.pk/web/index.php/academic-calendar-2019-2020",
+                                );
                               },
                             ),
                           ),
@@ -106,7 +110,7 @@ void _handleURLButtonPressWebsite(BuildContext context, String url) {
       MaterialPageRoute(builder: (context) => WebViewContainerWebsite(url)));
 }
 
-void _hendleURLButtonPressCalendar(BuildContext context, String url) {
+void _handleURLButtonPressCalendar(BuildContext context, String url) {
   Navigator.push(context,
       MaterialPageRoute(builder: (context) => WebContainerCalendar(url)));
 }

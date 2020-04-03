@@ -15,16 +15,6 @@ class Auditorium extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color(0xBF3C2E7F),
-          actions: <Widget>[
-            FlatButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            )
-          ],
-        ),
         backgroundColor: Color(0xBF3C2E7F),
         body: MaterialApp(
           debugShowCheckedModeBanner: false,

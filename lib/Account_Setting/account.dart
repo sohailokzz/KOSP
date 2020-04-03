@@ -10,26 +10,18 @@ class AboutAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: true,
-          backgroundColor: Color(0xBF3C2E7F),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context),
-          ),
-        ),
-        backgroundColor: Color(0xBF3C2E7F),
-
-        body: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'About Account',
-          home: AccountFront(),
-          routes: {
-            AccountDetails.id: (context) => AccountDetails(),
-            SingIn.id: (context) => SingIn(),
-            MyAccount.id: (context) => MyAccount(),
-          },
-        ));
+      backgroundColor: Color(0xBF3C2E7F),
+      body: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'About Account',
+        home: AccountFront(),
+        routes: {
+          AccountDetails.id: (context) => AccountDetails(),
+          SingIn.id: (context) => SingIn(),
+          MyAccount.id: (context) => MyAccount(),
+        },
+      ),
+    );
   }
 }
 

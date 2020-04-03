@@ -9,16 +9,15 @@ class MyAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    body: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Account Details',
-      home: MyAccountFront(),
-      routes: {
-        '/homepage': (context) => HomePage(),
-      },
-    ) ,
+      body: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Account Details',
+        home: MyAccountFront(),
+        routes: {
+          '/homepage': (context) => HomePage(),
+        },
+      ),
     );
-
   }
 }
 

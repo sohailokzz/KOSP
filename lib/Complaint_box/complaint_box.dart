@@ -7,21 +7,13 @@ class ComplaintBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: true,
-          backgroundColor: Color(0xBF3C2E7F),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context),
-          ),
-        ),
-
-        backgroundColor: Color(0xBF3C2E7F),
-        body: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Complaint Box',
-          home: Complaint(),
-        ));
+      backgroundColor: Color(0xBF3C2E7F),
+      body: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Complaint Box',
+        home: Complaint(),
+      ),
+    );
   }
 }
 

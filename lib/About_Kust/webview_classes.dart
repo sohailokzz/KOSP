@@ -56,10 +56,11 @@ class _WebContainerCalendarState extends State<WebContainerCalendar> {
         children: [
           Expanded(
             child: WebView(
-                key: _key,
-                javascriptMode: JavascriptMode.unrestricted,
-                initialUrl:
-                    "https://kust.edu.pk/web/index.php/academic-calendar-2019-2020"),
+              key: _key,
+              javascriptMode: JavascriptMode.unrestricted,
+              initialUrl:
+                  "https://kust.edu.pk/web/index.php/academic-calendar-2019-2020",
+            ),
           ),
         ],
       ),
