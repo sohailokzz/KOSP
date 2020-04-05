@@ -14,22 +14,20 @@ class Auditorium extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Color(0xBF3C2E7F),
-        body: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Auditoriums',
-          home: Auditoriums(),
-          routes: {
-            MainAudiDetails.id: (context) => MainAudiDetails(),
-            IOCAudiDetails.id: (context) => IOCAudiDetails(),
-            MathsAudiDetails.id: (context) => MathsAudiDetails(),
-            EnglishAudiDetails.id: (context) => EnglishAudiDetails(),
-            PhysicsAudiDetails.id: (context) => PhysicsAudiDetails(),
-            ChemistryAudiDetails.id: (context) => ChemistryAudiDetails(),
-            IBSAudiDetails.id: (context) => IBSAudiDetails(),
-          },
-        ));
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Auditoriums',
+      home: Auditoriums(),
+      routes: {
+        MainAudiDetails.id: (context) => MainAudiDetails(),
+        IOCAudiDetails.id: (context) => IOCAudiDetails(),
+        MathsAudiDetails.id: (context) => MathsAudiDetails(),
+        EnglishAudiDetails.id: (context) => EnglishAudiDetails(),
+        PhysicsAudiDetails.id: (context) => PhysicsAudiDetails(),
+        ChemistryAudiDetails.id: (context) => ChemistryAudiDetails(),
+        IBSAudiDetails.id: (context) => IBSAudiDetails(),
+      },
+    );
   }
 }
 

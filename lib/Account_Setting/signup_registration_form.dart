@@ -1,10 +1,13 @@
-import 'package:kust_online/Auditoriums/auditorium_dialoguebox.dart';
+import 'package:kust_online/Account_Setting/signup_mydialog_box.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:kust_online/Home_page_and_menue_page/my_menue.dart';
 import '../constant.dart';
 
 class RegistraionForm extends StatelessWidget {
+  final _auth = FirebaseAuth.instance;
+  String _email, _password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,13 +71,15 @@ class RegistraionForm extends StatelessWidget {
                         ),
                       ),
                       KReusableName(
-                        nameField: 'Name:',
+                        nameField: 'Email:',
                         icon: Icons.person,
                       ),
                       TextField(
+                        onChanged: (value) {
+                          _email = value;
+                        },
                         keyboardType: TextInputType.emailAddress,
                         textAlign: TextAlign.center,
-                        onChanged: (value) {},
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Enter Your Email',
                         ),
@@ -87,8 +92,8 @@ class RegistraionForm extends StatelessWidget {
                         icon: Icons.person,
                       ),
                       TextField(
-                        textAlign: TextAlign.center,
                         onChanged: (value) {},
+                        textAlign: TextAlign.center,
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Enter Your Username',
                         ),
@@ -100,10 +105,12 @@ class RegistraionForm extends StatelessWidget {
                         nameField: 'Password:',
                         icon: Icons.lock,
                       ),
-                      TextField(
+                      TextFormField(
+                        onChanged: (value) {
+                          _password = value;
+                        },
                         obscureText: true,
                         textAlign: TextAlign.center,
-                        onChanged: (value) {},
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Enter Your Password',
                         ),
@@ -114,11 +121,21 @@ class RegistraionForm extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: RaisedButton(
-                          onPressed: () {
+                          onPressed: () async {
+                            try {
+                              final newUser =
+                                  await _auth.createUserWithEmailAndPassword(
+                                      email: _email, password: _password);
+                              if (newUser != null) {
+                                Navigator.pushNamed(context, MyMenu.id);
+                              }
+                            } catch (e) {
+                              print(e);
+                            }
                             showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
-                                  return MyDialogBox();
+                                  return SignUpMyDialogBox();
                                 });
                           },
                           child: Center(

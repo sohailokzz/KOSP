@@ -12,6 +12,7 @@ class AllAuditorium extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         automaticallyImplyLeading: true,
         backgroundColor: Color(0xFF3B2E7E),

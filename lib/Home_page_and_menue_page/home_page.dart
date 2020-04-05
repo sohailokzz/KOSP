@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:kust_online/Notification_Bell/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -13,10 +14,7 @@ import '../Cafe/cafe_details.dart';
 import '../Parking_Registration/parking_registration.dart';
 import '../Complaint_box/complaint_box.dart';
 import 'package:kust_online/account_setting/account.dart';
-
 import 'my_menue.dart';
-
-
 
 class HomePage extends StatelessWidget {
   static String id = "homepage";
@@ -26,7 +24,7 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'HomePage',
-      home: Menu(),
+      home: MyMenu(),
       routes: {
         AboutKUST.id: (context) => AboutKUST(),
         Auditorium.id: (context) => Auditorium(),
@@ -40,9 +38,7 @@ class HomePage extends StatelessWidget {
         VCAppointment.id: (context) => VCAppointment(),
         AboutAccount.id: (context) => AboutAccount(),
         Notifications.id: (context) => Notifications(),
-        MyMenu.id:(context)=>MyMenu(),
-
-
+        MyMenu.id: (context) => MyMenu(),
       },
     );
   }
@@ -54,6 +50,26 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+  final _auth = FirebaseAuth.instance;
+  FirebaseUser loggedInUser;
+  @override
+  void initState() {
+    super.initState();
+    getCurrentUser();
+  }
+
+  void getCurrentUser() async {
+    try {
+      final user = await _auth.currentUser();
+      if (user != null) {
+        loggedInUser = user;
+        print(loggedInUser.email);
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
   final purpleOpacity = Container(
     color: Color(0xD13C2E7F),
   );
@@ -61,26 +77,19 @@ class _MenuState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Stack(
-          fit: StackFit.expand,
-
-          children: <Widget>[
-            KBackground(
-              assetImage: 'assets/menubackground.jpg',
-            ),
-            MyMenu(),
-
-          ],
-        ),
-
+        body: SafeArea(
+      child: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          KBackground(
+            assetImage: 'assets/menubackground.jpg',
+          ),
+          MyMenu(),
+        ],
       ),
+    ),
     );
-
   }
-
-
 }
-
 
 //0xBAFFFFFFFF

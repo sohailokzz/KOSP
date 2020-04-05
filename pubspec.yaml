@@ -11,8 +11,12 @@ dependencies:
     sdk: flutter
 
 
+
   cupertino_icons: ^0.1.2
   webview_flutter: ^0.3.10+2
+  firebase_auth: ^0.15.5+3
+
+
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +61,13 @@ flutter:
     - assets/cafemain.jpg
     - assets/sohail.jpg
     - assets/person.png
+    - assets/S1.jpg
+    - assets/s2.jpg
+    - assets/s3.jpg
+    - assets/s4.jpg
+    - assets/s5.jpg
+    - assets/s6.jpg
+    - assets/s7.jpeg
 
 
 

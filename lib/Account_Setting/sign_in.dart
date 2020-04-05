@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:kust_online/account_setting/signin-details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,17 +9,13 @@ class SingIn extends StatelessWidget {
   static String id = 'sign_in';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomPadding: false,
-      backgroundColor: Color(0xBF3C2E7F),
-      body: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'SignIn Details',
-        home: SignInForm(),
-        routes: {
-          '/homepage': (context) => HomePage(),
-        },
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'SignIn Details',
+      home: SignInForm(),
+      routes: {
+        '/homepage': (context) => HomePage(),
+      },
     );
   }
 }

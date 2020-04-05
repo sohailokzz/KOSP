@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "889127523902",
+    "firebase_url": "https://kust-digital-app.firebaseio.com",
+    "project_id": "kust-digital-app",
+    "storage_bucket": "kust-digital-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889127523902:android:a13acd46c6e19e73b1e36f",
+        "android_client_info": {
+          "package_name": "com.sohailokzz.kust_online"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889127523902-l28vmsm5cm79v2n60m1pau82dt9lu786.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq4CfzGgPo4CB1HgUhNX_yA6wNSk-brrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889127523902-l28vmsm5cm79v2n60m1pau82dt9lu786.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

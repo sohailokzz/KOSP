@@ -1,10 +1,14 @@
-import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/rendering.dart';
+import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
+import 'package:kust_online/Home_page_and_menue_page/my_menue.dart';
 import '../constant.dart';
 
 class SingInDetails extends StatelessWidget {
+  final _auth = FirebaseAuth.instance;
+  String _email, _password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,13 +74,15 @@ class SingInDetails extends StatelessWidget {
                         height: 20.0,
                       ),
                       KReusableName(
-                        nameField: 'Name:',
+                        nameField: 'Email:',
                         icon: Icons.person,
                       ),
                       TextField(
+                        onChanged: (value) {
+                          _email = value;
+                        },
                         textAlign: TextAlign.center,
                         keyboardType: TextInputType.emailAddress,
-                        onChanged: (value) {},
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Enter Your Email',
                         ),
@@ -89,9 +95,11 @@ class SingInDetails extends StatelessWidget {
                         icon: Icons.lock,
                       ),
                       TextField(
+                        onChanged: (value) {
+                          _password = value;
+                        },
                         textAlign: TextAlign.center,
                         obscureText: true,
-                        onChanged: (value) {},
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'Enter Your Password',
                         ),
@@ -102,13 +110,17 @@ class SingInDetails extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: RaisedButton(
-                          onPressed: () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePage(),
-                              ),
-                            );
+                          onPressed: () async {
+                            try {
+                              final user =
+                                  await _auth.signInWithEmailAndPassword(
+                                      email: _email, password: _password);
+                              if (user != null) {
+                                Navigator.pushNamed(context, MyMenu.id);
+                              }
+                            } catch (e) {
+                              print(e);
+                            }
                           },
                           child: Center(
                             child: Text(

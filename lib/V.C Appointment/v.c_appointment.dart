@@ -6,13 +6,10 @@ class VCAppointment extends StatelessWidget {
   static String id = 'vc_appointment';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xBF3C2E7F),
-      body: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Apointment',
-        home: Appointment(),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Apointment',
+      home: Appointment(),
     );
   }
 }

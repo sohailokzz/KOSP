@@ -17,6 +17,7 @@ import '../Notification_Bell/notification_page.dart';
 
 class MyMenu extends StatelessWidget {
   static String id = "my_menu";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

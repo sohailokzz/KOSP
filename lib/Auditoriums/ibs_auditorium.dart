@@ -6,12 +6,11 @@ class IBSAudiDetails extends StatelessWidget {
   static String id = 'ibs_auditorium';
   @override
   Widget build(BuildContext context) {
-    return   MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'IBS Auditorium',
       home: IBSAudiScreen(),
     );
-
   }
 }
 
