@@ -49,6 +49,8 @@ class KUSTInfo extends StatelessWidget {
                       Row(children: <Widget>[
                         Expanded(
                           child: KMyButton(
+                            radius: 15.0,
+                            height: 80.0,
                             label: 'Website',
                             size: 20.0,
                             onPress: () {
@@ -67,6 +69,8 @@ class KUSTInfo extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: KMyButton(
+                              radius: 15.0,
+                              height: 80.0,
                               label: 'Semester Rules',
                               size: 20.0,
                               onPress: () {},
@@ -81,6 +85,8 @@ class KUSTInfo extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: KMyButton(
+                              height: 80.0,
+                              radius: 15.0,
                               label: 'Calender',
                               size: 20.0,
                               onPress: () {

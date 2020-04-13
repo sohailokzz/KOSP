@@ -75,18 +75,21 @@ class KBackground extends StatelessWidget {
 }
 
 class KMyButton extends StatelessWidget {
-  KMyButton({this.label, this.size, this.onPress});
+  KMyButton({this.label, this.size, this.onPress, this.height, this.radius});
   final String label;
   final double size;
   final Function onPress;
+  final double height;
+  final double radius;
 
   @override
   Widget build(BuildContext context) {
     return ButtonTheme(
-      height: 80.0,
+      height: height,
       child: RaisedButton(
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(radius),
+        ),
         color: Color(0xFF3B2E7E),
         onPressed: onPress,
         child: Center(
@@ -129,6 +132,10 @@ class KReusableName extends StatelessWidget {
 const kTextFieldDecoration = InputDecoration(
   filled: true,
   fillColor: Colors.white,
+  errorStyle: TextStyle(fontSize: 20.0, color: Colors.orange),
+  focusedErrorBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: Colors.orange),
+  ),
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
   border: OutlineInputBorder(
     borderRadius: BorderRadius.all(

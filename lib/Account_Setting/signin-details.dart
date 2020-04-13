@@ -8,7 +8,8 @@ import '../constant.dart';
 
 class SingInDetails extends StatelessWidget {
   final _auth = FirebaseAuth.instance;
-  String _email, _password;
+  String _email;
+  String _password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,18 +111,6 @@ class SingInDetails extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: RaisedButton(
-                          onPressed: () async {
-                            try {
-                              final user =
-                                  await _auth.signInWithEmailAndPassword(
-                                      email: _email, password: _password);
-                              if (user != null) {
-                                Navigator.pushNamed(context, MyMenu.id);
-                              }
-                            } catch (e) {
-                              print(e);
-                            }
-                          },
                           child: Center(
                             child: Text(
                               'Sign In',
@@ -132,6 +121,20 @@ class SingInDetails extends StatelessWidget {
                             borderRadius: BorderRadius.circular(30.0),
                           ),
                           color: Color(0xFF3B2E7E),
+                          onPressed: () async {
+                            try {
+                              final user =
+                                  await _auth.signInWithEmailAndPassword(
+                                      email: _email, password: _password);
+                              if (user != null) {
+                                print('sign Sucess');
+                                Navigator.pushReplacementNamed(
+                                    context, HomePage.id);
+                              }
+                            } catch (e) {
+                              print(e);
+                            }
+                          },
                         ),
                       ),
                     ],

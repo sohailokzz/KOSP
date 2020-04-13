@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:kust_online/constant.dart';
 import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
 
+import 'package:modal_progress_hud/modal_progress_hud.dart';
+
 class AccountDetails extends StatelessWidget {
   static String id = 'account_details';
   @override
@@ -14,7 +16,7 @@ class AccountDetails extends StatelessWidget {
       title: 'Account Details',
       home: AccountRegistrationForm(),
       routes: {
-        '/homepage': (context) => HomePage(),
+        HomePage.id: (context) => HomePage(),
       },
     );
   }

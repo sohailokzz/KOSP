@@ -67,6 +67,8 @@ class ReusableRow extends StatelessWidget {
       children: <Widget>[
         Expanded(
           child: KMyButton(
+            radius: 15.0,
+            height: 80.0,
             label: label1,
             size: 17.0,
             onPress: route1,
@@ -77,6 +79,8 @@ class ReusableRow extends StatelessWidget {
         ),
         Expanded(
           child: KMyButton(
+            radius: 15.0,
+            height: 80.0,
             label: label2,
             size: 17.0,
             onPress: route1,

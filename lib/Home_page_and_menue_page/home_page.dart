@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:kust_online/Account_Setting/welcome.dart';
 import 'package:kust_online/Notification_Bell/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -13,7 +14,6 @@ import '../Namaz/namaz_details.dart';
 import '../Cafe/cafe_details.dart';
 import '../Parking_Registration/parking_registration.dart';
 import '../Complaint_box/complaint_box.dart';
-import 'package:kust_online/account_setting/account.dart';
 import 'my_menue.dart';
 
 class HomePage extends StatelessWidget {
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
         ParkingDetails.id: (context) => ParkingDetails(),
         ComplaintBox.id: (context) => ComplaintBox(),
         VCAppointment.id: (context) => VCAppointment(),
-        AboutAccount.id: (context) => AboutAccount(),
+        WelcomePage.id: (context) => WelcomePage(),
         Notifications.id: (context) => Notifications(),
         MyMenu.id: (context) => MyMenu(),
       },
@@ -45,6 +45,7 @@ class HomePage extends StatelessWidget {
 }
 
 class Menu extends StatefulWidget {
+  static String id = "menu";
   @override
   _MenuState createState() => _MenuState();
 }
@@ -70,24 +71,20 @@ class _MenuState extends State<Menu> {
     }
   }
 
-  final purpleOpacity = Container(
-    color: Color(0xD13C2E7F),
-  );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          KBackground(
-            assetImage: 'assets/menubackground.jpg',
-          ),
-          MyMenu(),
-        ],
+      body: SafeArea(
+        child: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            KBackground(
+              assetImage: 'assets/menubackground.jpg',
+            ),
+            MyMenu(),
+          ],
+        ),
       ),
-    ),
     );
   }
 }

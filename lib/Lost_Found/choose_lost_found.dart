@@ -61,6 +61,8 @@ class LostFoundChoose extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: KMyButton(
+                              radius: 15.0,
+                              height: 80.0,
                               label: 'I Lost',
                               size: 20.0,
                               onPress: () {
@@ -77,6 +79,8 @@ class LostFoundChoose extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: KMyButton(
+                              radius: 15.0,
+                              height: 80.0,
                               label: 'I Found',
                               size: 20.0,
                               onPress: () {

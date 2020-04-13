@@ -14,7 +14,7 @@ class SingIn extends StatelessWidget {
       title: 'SignIn Details',
       home: SignInForm(),
       routes: {
-        '/homepage': (context) => HomePage(),
+        HomePage.id: (context) => HomePage(),
       },
     );
   }

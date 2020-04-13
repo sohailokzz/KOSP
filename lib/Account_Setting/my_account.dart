@@ -1,3 +1,4 @@
+import 'package:kust_online/Account_Setting/welcome.dart';
 import 'package:kust_online/account_setting/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class MyAccount extends StatelessWidget {
         title: 'Account Details',
         home: MyAccountFront(),
         routes: {
-          '/homepage': (context) => HomePage(),
+          WelcomePage.id: (context) => WelcomePage(),
         },
       ),
     );

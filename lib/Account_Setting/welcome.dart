@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:kust_online/Home_page_and_menue_page/home_page.dart';
 import 'package:kust_online/constant.dart';
-import 'account_button_design.dart';
+import 'welcome_button_design.dart';
 import 'sign_up.dart';
 import 'sign_in.dart';
 import 'my_account.dart';
 
-class AboutAccount extends StatelessWidget {
-  static String id = 'about_account';
+class WelcomePage extends StatelessWidget {
+  static String id = 'welcome';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +19,7 @@ class AboutAccount extends StatelessWidget {
         routes: {
           AccountDetails.id: (context) => AccountDetails(),
           SingIn.id: (context) => SingIn(),
-          MyAccount.id: (context) => MyAccount(),
+          HomePage.id: (context) => HomePage(),
         },
       ),
     );

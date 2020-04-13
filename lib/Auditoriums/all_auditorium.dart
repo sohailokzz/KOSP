@@ -64,6 +64,8 @@ class AllAuditorium extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             child: KMyButton(
+                              radius: 15.0,
+                              height: 80.0,
                               label: 'Main Auditorium',
                               size: 20.0,
                               onPress: () {

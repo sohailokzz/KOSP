@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../Home_page_and_menue_page/home_page.dart';
+
 import 'dart:async';
 import 'package:kust_online/constant.dart';
+
+import 'package:kust_online/Account_Setting/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -46,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen>
   onDoneLoading() async {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => HomePage(),
+        builder: (context) => WelcomePage(),
       ),
     );
   }
@@ -87,10 +89,8 @@ class _SplashScreenState extends State<SplashScreen>
             .animate(controller),
         child: Text(
           'Welcome To KOSP',
-          style: ktextStyle.copyWith(
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold
-          ),
+          style:
+              ktextStyle.copyWith(fontSize: 30.0, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),
       ),
